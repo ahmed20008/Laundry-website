@@ -16,7 +16,7 @@ interface SignupProps {
 
 export const Signup: FC<SignupProps> = ({ onHide, show }) => {
 
-  const [value, setValue] = useState<string>('');
+  const [value, setValue] = useState<string>();
 
   return (
     <div>
