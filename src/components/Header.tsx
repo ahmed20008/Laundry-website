@@ -3,11 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from '@mui/material/Button';
-import { logo } from '../assets';
+import { logo, SignupLogo, LoginLogo } from '../assets';
 
 import './Header.css';
-import { Login } from './Login';
-import { Signup } from './Signup';
+import { Login } from './Modals/Login';
+import { Signup } from './Modals/Signup';
 
 
 const Header: React.FC = () => {
@@ -43,18 +43,20 @@ const Header: React.FC = () => {
           <div className="col-md-12">
             <div className='container-fluid'>
               <div className='d-flex justify-content-end'>
-                <div className="contact pe-4">
+                <div className="contact pe-3">
                   <a href='#' className='text-white text-decoration-none'>
                     <p>+234 (123) 456 7890</p>
                   </a>
                 </div>
-                <div className="contact pe-4">
+                <div className="contact pe-2">
+                  <img src={LoginLogo}/>
                   <button onClick={() => setLoginModalShow(true)} className='text-white'>
                     Login
                   </button>
                 </div>
                 <Login show={LoginmodalShow} onHide={() => setLoginModalShow(false)} />
                 <div className="contact pe-4">
+                  <img src={SignupLogo}/>
                   <button onClick={() => setSignupModalShow(true)} className='text-white'>
                     Sign up
                   </button>
@@ -64,7 +66,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         </div>
-      </div >
+      </div>
 
       <Navbar collapseOnSelect expand="lg"
         style={{

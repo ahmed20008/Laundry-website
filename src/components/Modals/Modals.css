@@ -1,0 +1,63 @@
+.fullstop{
+    background: linear-gradient(180deg, rgba(53, 167, 255, 0.87) 0%, rgba(53, 213, 229, 0.75941) 67.77%, rgba(53, 255, 207, 0.66) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+.signup h4{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    color: #464646;
+    text-align: center;
+}
+.signup-form{
+    padding: 16px 20px 16px 11px;
+    background: rgba(230, 230, 230, 0.31);
+    border-radius: 10px;
+    border: none;
+}
+.forget-pass{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline;
+    color: #5FA1D5;
+}
+.inline-content{
+    display: flex;
+    justify-content: space-between;
+}
+.login h4{
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    color: #464646;
+}
+.facebook-btn, .facebook-btn:hover{
+    background: #E6E6E6;
+    border-radius: 10px;
+    width: 89px;
+    height: 52px;
+    color: #fff;
+    margin-left: 1rem;
+}
+.google-btn, .google-btn:hover{
+    background: #E6E6E6;
+    border-radius: 10px;
+    width: 89px;
+    height: 52px;
+    color: #fff;
+}
+.PhoneInputInput {
+    border: none;
+    background: transparent;
+}
+.PhoneInputInput:focus-visible {
+    outline: none;
+}
+@media screen and (max-width: 500px) {
+    
+}
