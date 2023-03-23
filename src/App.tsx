@@ -1,13 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header, Footer } from './components';
-import MainPage from './components/MainPage/MainPage';
+import Home from './components/Home/Home';
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
-      <MainPage />
+      <Home />
       <Footer />
     </>
   );

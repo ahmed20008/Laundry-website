@@ -30,6 +30,10 @@
     display: flex;
     justify-content: space-between;
 }
+.inline-content-btn{
+    display: flex;
+    justify-content: space-between;
+}
 .login h4{
     font-weight: 600;
     font-size: 35px;
@@ -51,6 +55,25 @@
     height: 52px;
     color: #fff;
 }
+.login-btn{
+    background: #35A7FF;
+    border-radius: 10px;
+    width: 200px;
+    height: 52px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+.signup-btn{
+    background: #35A7FF;
+    border-radius: 10px;
+    width: 200px;
+    height: 52px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+}
 .PhoneInputInput {
     border: none;
     background: transparent;
@@ -59,5 +82,28 @@
     outline: none;
 }
 @media screen and (max-width: 500px) {
-    
+    .inline-content-btn{
+        display: contents;
+    }
+    .login-btn{
+        width: 100%;
+    }
+    .signup-btn{
+        width: 100%;
+    }
+    .google-btn{
+        margin-top: 1rem;
+        width: 45%;
+    }
+    .facebook-btn{
+        margin-top: 1rem;
+        width: 45%;
+    }
+    .forget-pass{
+        font-size: 14px;
+    }
+    .fandg{
+        display: flex;
+        justify-content: center;
+    }
 }

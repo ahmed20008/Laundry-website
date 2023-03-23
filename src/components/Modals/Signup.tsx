@@ -53,22 +53,16 @@ export const Signup: FC<SignupProps> = ({ onHide, show }) => {
                 <a href="#" className='my-3 forget-pass'>Forgot password?</a>
               </div>
               <Form.Control type="text" placeholder="Referrel Code (Optional)" className='mb-3 signup-form'/>
-              <div className='inline-content'>
+              <div className='inline-content-btn'>
                 <Button
                   variant="contained"
+                  className='signup-btn'
                   style={{
-                    background: '#35A7FF',
-                    borderRadius: '10px',
-                    width: '200px',
-                    height: '52px',
-                    fontSize: '20px',
-                    color: '#fff',
-                    fontWeight: '500',
-                    letterSpacing: '-0.05em',
+                    
                   }}>
                   Create Account
                 </Button>
-                <div>
+                <div className='fandg'>
                   <Button variant="contained" className='google-btn'>
                     <img src={googleBtn} alt="" />
                   </Button>

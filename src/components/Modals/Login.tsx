@@ -45,19 +45,10 @@ export const Login: FC<LoginProps> = ({ onHide, show }) => {
                                 <a href="#" className='my-3 forget-pass'>Forgot password?</a>
                             </div>
                             
-                            <div className='inline-content'>
+                            <div className='inline-content-btn'>
                                 <Button
                                     variant="contained"
-                                    style={{
-                                        background: '#35A7FF',
-                                        borderRadius: '10px',
-                                        width: '200px',
-                                        height: '52px',
-                                        fontSize: '20px',
-                                        color: '#fff',
-                                        fontWeight: '500',
-                                    }}
-                                    >
+                                    className='login-btn'>
                                     Log in
                                 </Button>
                                 <div>

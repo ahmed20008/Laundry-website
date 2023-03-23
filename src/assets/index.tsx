@@ -11,6 +11,7 @@ import map from './map.png';
 import mail from './mail.png';
 import googleBtn from './google-btn.svg';
 import facebookBtn from './facebook-btn.svg';
+import landingPage from './landing-page.png'
 
 export {
     logo,
@@ -26,6 +27,7 @@ export {
     LoginLogo,
     googleBtn,
     facebookBtn,
-
+    landingPage,
+    
 
 }
