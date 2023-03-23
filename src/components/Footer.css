@@ -1,0 +1,86 @@
+.footer{
+    background-color: #292929;
+    color: #fff;
+}
+.footer-socials{
+    display: flex;
+    padding-bottom: 3rem;
+}
+.footer-bar{
+    border: 2px solid var(--linear-blue);
+    width: 41px;
+}
+.footer-services {
+    padding:  0 !important;
+}
+.footer-services li{
+    list-style-type: none;
+    background: url(../assets/list-arrow.svg) no-repeat left top;
+    padding: 6px 0px 3px 24px;
+    background-position: 6px;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.footer-heading{
+    background: linear-gradient(180deg, rgba(53, 167, 255, 0.87) 0%, rgba(53, 213, 229, 0.75941) 67.77%, rgba(53, 255, 207, 0.66) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 54px;
+}
+.footer-contact address{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.footer-contact .phone{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+}
+.footer-contact .phone a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-contact .mail{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 16px;
+}
+.footer-contact .mail a{
+    text-decoration: none;
+    color: #86CAFF;
+}
+.footer-timing .time{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+.footer-timing p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1004px) {
+    .footer-contact .phone{
+        font-size: 19px;
+    }
+    .footer-timing .time {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 991px){
+    .p-0{
+        padding: 0;
+    }
+    .pb-0{
+        padding: 0;
+    }
+}

@@ -1,0 +1,14 @@
+:root{
+    --white: #fff;
+    --linear-blue: rgba(53, 167, 255, 0.87);
+    --linear-2: linear-gradient(180deg, rgba(9, 114, 195, 0.87) 0%, rgba(17, 183, 200, 0.75941) 67.77%, rgba(0, 198, 150, 0.66) 100%);
+    --linear-green: linear-gradient(0deg, #35FFCF, #35FFCF);
+}
+html{
+    height: 1000px;
+    overflow-x: hidden;
+}
+p{
+    padding: 0%;
+    margin: 0%;
+}
