@@ -1,7 +1,9 @@
-.landing-page .landing-img{
-    object-fit: cover;   
+.landing-page .landing-img {
+    object-fit: cover;
+    overflow: hidden;
 }
-.landing-page .landing-text h1{
+
+.landing-page .landing-text h1 {
     font-style: normal;
     font-weight: 400;
     font-size: 80px;
@@ -10,11 +12,13 @@
     letter-spacing: 0.015em;
     font-feature-settings: 'liga' off;
 }
-.landing-page .text-bar{
+
+.landing-page .text-bar {
     border: 1px solid rgba(70, 70, 70, 1);
     width: 250px;
 }
-.landing-page .sub-text{
+
+.landing-page .sub-text {
     font-style: normal;
     font-weight: 500;
     font-size: 25px;
@@ -22,4 +26,118 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #464646;
+}
+
+@media screen and (max-width: 1279px) {
+    .landing-page .landing-text h1 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+}
+
+@media screen and (max-width: 1193px) {
+    .landing-page .sub-text {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1133px) {
+    .landing-page .landing-text h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 1163px) {
+    .landing-page .sub-text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .landing-page .landing-text h1 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    .landing-page .sub-text {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 851px) {
+    .landing-page .landing-text h1 {
+        font-size: 44px;
+        line-height: 60px;
+    }
+
+    .landing-page .sub-text {
+        font-size: 15px;
+    }
+
+    .landing-page .text-bar {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .landing-page .landing-text h1 {
+        font-size: 44px;
+        line-height: 60px;
+        text-align: center;
+        padding-top: 1rem;
+        color: #fff;
+    }
+
+    .landing-page .sub-text {
+        font-size: 15px;
+        padding-bottom: 2rem;
+        text-align: center;
+        color: #fff;
+    }
+    .bar-sm{
+        display: flex;
+        justify-content: center;
+    }
+    .landing-page .text-bar {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        border: 1px solid #fff;
+    }
+    .landing-text {
+        position: absolute;
+        top: 30%;
+    }
+}
+@media screen and (max-width: 393px){
+    .landing-page .landing-text h1 {
+        font-size: 35px;
+        line-height: 45px;        
+    }
+    .landing-page .sub-text {
+        font-size: 12px;
+        padding-bottom: 2rem;
+        text-align: center;
+        color: #fff;
+    }
+} 
+@media screen and (max-width: 330px){
+    .landing-text {
+        top: 25%;
+    }
+    .landing-page .landing-text h1 {
+        font-size: 30px;
+        line-height: 40px;        
+    }
+    .landing-page .sub-text {
+        font-size: 12px;
+        padding-bottom: 2rem;
+        text-align: center;
+        color: #fff;
+    }
+    .main-heading{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }

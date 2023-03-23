@@ -13,3 +13,11 @@ p{
     padding: 0%;
     margin: 0%;
 }
+@media screen and (max-width: 767px) {
+    .order-xs-1{
+        order: 1;
+    }
+    .order-xs-2{
+        order: 2;
+    }
+}
