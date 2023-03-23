@@ -55,7 +55,7 @@
     height: 52px;
     color: #fff;
 }
-.login-btn{
+.login-btn, .login-btn:hover{
     background: #35A7FF;
     border-radius: 10px;
     width: 200px;
@@ -64,7 +64,7 @@
     color: #fff;
     font-weight: 500;
 }
-.signup-btn{
+.signup-btn, .signup-btn:hover{
     background: #35A7FF;
     border-radius: 10px;
     width: 200px;
@@ -85,17 +85,17 @@
     .inline-content-btn{
         display: contents;
     }
-    .login-btn{
+    .login-btn, .login-btn:hover{
         width: 100%;
     }
-    .signup-btn{
+    .signup-btn, .signup-btn:hover{
         width: 100%;
     }
-    .google-btn{
+    .google-btn, .google-btn:hover{
         margin-top: 1rem;
         width: 45%;
     }
-    .facebook-btn{
+    .facebook-btn, .facebook-btn:hover{
         margin-top: 1rem;
         width: 45%;
     }

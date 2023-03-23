@@ -11,7 +11,7 @@ const Home: React.FC = () => {
                 <div className="row">
                     <div className="col-md-6 my-auto landing-text">
                         <div className='px-4 main-heading'>
-                            <h1>
+                            <h1> 
                                 Save Time For More Important Things
                             </h1>
                         </div>

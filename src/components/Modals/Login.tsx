@@ -51,7 +51,7 @@ export const Login: FC<LoginProps> = ({ onHide, show }) => {
                                     className='login-btn'>
                                     Log in
                                 </Button>
-                                <div>
+                                <div className='fandg'>
                                     <Button variant="contained" className='google-btn'>
                                         <img src={googleBtn} alt="" />
                                     </Button>
