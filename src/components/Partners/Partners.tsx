@@ -7,7 +7,7 @@ const Partners: React.FC = () => {
   return (
     <>
     <section>
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           <div className="col-md-6 my-auto">
             <div className="partners-heading">
@@ -61,6 +61,9 @@ const Partners: React.FC = () => {
           </div>
         </div>
       </div>
+    </section>
+    <section>
+
     </section>
 
     </>
