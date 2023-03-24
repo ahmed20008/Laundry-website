@@ -8,6 +8,8 @@ import { logo, SignupLogo, LoginLogo } from '../assets';
 import './Header.css';
 import { Login } from './Modals/Login';
 import { Signup } from './Modals/Signup';
+import { Link } from 'react-router-dom';
+
 
 
 const Header: React.FC = () => {
@@ -32,7 +34,7 @@ const Header: React.FC = () => {
     LoginmodalShow: boolean;
     SignupmodalShow: boolean;
   }
-  
+
   const [LoginmodalShow, setLoginModalShow] = useState<boolean>(false);
   const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
 
@@ -49,14 +51,14 @@ const Header: React.FC = () => {
                   </a>
                 </div>
                 <div className="contact pe-2">
-                  <img src={LoginLogo}/>
+                  <img src={LoginLogo} />
                   <button onClick={() => setLoginModalShow(true)} className='text-white'>
                     Login
                   </button>
                 </div>
                 <Login show={LoginmodalShow} onHide={() => setLoginModalShow(false)} />
                 <div className="contact pe-4">
-                  <img src={SignupLogo}/>
+                  <img src={SignupLogo} />
                   <button onClick={() => setSignupModalShow(true)} className='text-white'>
                     Sign up
                   </button>
@@ -77,14 +79,16 @@ const Header: React.FC = () => {
           zIndex: 1
         }}>
         <Container fluid>
-          <Navbar.Brand href="/"><img src={logo} alt="" /></Navbar.Brand>
+          <Link to={"/"}>
+            <Navbar.Brand href="/"><img src={logo} alt="" /></Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ border: 'none' }} />
           <Navbar.Collapse id="responsive-navbar-nav" className='bg-white p-3 rounded-bottom'>
             <Nav className="mx-auto">
-              <Nav.Link href="/" className='nav-pages'>Home</Nav.Link>
-              <Nav.Link href="#service" className='ps-5 nav-pages'>Services & Pricing</Nav.Link>
-              <Nav.Link href="#partner" className='ps-5 nav-pages'>Partner with us</Nav.Link>
-              <Nav.Link href="#contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
+              <Nav.Link as={Link} to="/" className='nav-pages' >Home</Nav.Link>
+              <Nav.Link as={Link} to="/services" className='ps-5 nav-pages'>Services & Pricing</Nav.Link>
+              <Nav.Link as={Link} to="/partners" className='ps-5 nav-pages'>Partner with us</Nav.Link>
+              <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
             </Nav>
             <Nav>
               <Button
