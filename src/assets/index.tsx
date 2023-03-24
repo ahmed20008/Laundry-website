@@ -18,7 +18,7 @@ import deliveryParcel from './delivery-parcel.png';
 import delivery from './delivery.png';
 import partners from './partners.png';
 import partnersReason from './partners-reason.png';
-
+import ourServices from './our-services.png'
 
 
 
@@ -43,5 +43,7 @@ export {
     cleaning,
     partners,
     partnersReason,
+    ourServices,
+    
     
 }

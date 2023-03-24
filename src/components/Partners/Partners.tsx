@@ -109,7 +109,6 @@ const Partners: React.FC = () => {
                     borderRadius: '10px',
                     color: '#fff',
                     border: 'none',
-
                   }}>
                     Get in touch
                   </button>
