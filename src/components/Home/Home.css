@@ -27,6 +27,42 @@
     text-transform: uppercase;
     color: #464646;
 }
+.cards {
+    position:relative;
+    top: -50px;
+}
+.cards .card{
+    border: none;
+    border-radius: 20px;
+
+}
+
+.card .pickup{
+    background: linear-gradient(180deg, rgba(9, 114, 195, 0.87) 0%, rgba(17, 183, 200, 0.75941) 67.77%, rgba(0, 198, 150, 0.66) 100%);
+    display: flex;
+    align-items: center;
+    padding: 26px 11px;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 32px;
+}
+.card .deliveryparcel, .card .cleaning, .card .delivery{
+    display: flex;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 26px 11px;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+
+
+
+
 
 @media screen and (max-width: 1279px) {
     .landing-page .landing-text h1 {
@@ -62,6 +98,12 @@
 
     .landing-page .sub-text {
         font-size: 17px;
+    }
+    
+}
+@media screen and (max-width: 991px) and (min-width: 576px){
+    .card .pickup img, .card .deliveryparcel img, .card .cleaning img, .card .delivery img{
+        width: 40% !important;
     }
 }
 
@@ -109,6 +151,10 @@
         position: absolute;
         top: 30%;
     }
+    .card .pickup, .card .deliveryparcel, .card .cleaning, .card .delivery{
+        margin-bottom: 1rem;
+    }
+
 }
 @media screen and (max-width: 393px){
     .landing-page .landing-text h1 {

@@ -1,6 +1,6 @@
 import { Container } from '@mui/system';
 import React from 'react';
-import { landingPage } from '../../assets';
+import { cleaning, delivery, deliveryParcel, landingPage, mobileLogo } from '../../assets';
 
 import './Home.css';
 
@@ -29,26 +29,38 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="container">
+            <div className="container cards">
                 <div className='row'>
                     <div className="col-md-3 col-sm-6">
                         <div className="card">
-                            card 1
+                            <div className='pickup'>
+                                <img src={mobileLogo} alt="" />
+                                <h5>Schedule a Pick-up</h5>
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
                         <div className="card">
-                            card 1
+                        <div className='deliveryparcel'>
+                                <img src={deliveryParcel} alt="" />
+                                <h5 className='ms-2'>Drop off clothes</h5>
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
                         <div className="card">
-                            card 1
+                        <div className='cleaning'>
+                                <img src={cleaning} alt="" />
+                                <h5>Cleaning</h5>
+                            </div>
                         </div>
                     </div>
                     <div className="col-md-3 col-sm-6">
                         <div className="card">
-                            card 1
+                        <div className='delivery'>
+                                <img src={delivery} alt="" />
+                                <h5 className='ms-1'>Delivery</h5>
+                            </div>
                         </div>
                     </div>
                 </div>

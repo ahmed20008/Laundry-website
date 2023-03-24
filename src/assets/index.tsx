@@ -11,7 +11,11 @@ import map from './map.png';
 import mail from './mail.png';
 import googleBtn from './google-btn.svg';
 import facebookBtn from './facebook-btn.svg';
-import landingPage from './landing-page.png'
+import landingPage from './landing-page.png';
+import mobileLogo from './mobile.png';
+import cleaning from './cleaning.png';
+import deliveryParcel from './delivery-parcel.png';
+import delivery from './delivery.png'
 
 export {
     logo,
@@ -28,6 +32,10 @@ export {
     googleBtn,
     facebookBtn,
     landingPage,
+    delivery,
+    deliveryParcel,
+    mobileLogo,
+    cleaning,
     
 
 }
