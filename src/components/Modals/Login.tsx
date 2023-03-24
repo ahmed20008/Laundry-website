@@ -65,7 +65,9 @@ export const Login: FC<LoginProps> = ({ onHide, show }) => {
                     <div className='pt-2'>
                         <p>Don’t have an account? 
                             <Button 
-                            onClick={() => setSignupModalShow(true) }
+                            onClick={() => {
+                                setSignupModalShow(true);
+                            }}
                             
                             style={{
                                 backgroundColor: 'transparent',

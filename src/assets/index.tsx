@@ -15,7 +15,12 @@ import landingPage from './landing-page.png';
 import mobileLogo from './mobile.png';
 import cleaning from './cleaning.png';
 import deliveryParcel from './delivery-parcel.png';
-import delivery from './delivery.png'
+import delivery from './delivery.png';
+import partners from './partners.png';
+import partnersReason from './partners-reason.png';
+
+
+
 
 export {
     logo,
@@ -36,6 +41,7 @@ export {
     deliveryParcel,
     mobileLogo,
     cleaning,
+    partners,
+    partnersReason,
     
-
 }

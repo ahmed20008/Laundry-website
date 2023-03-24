@@ -5,11 +5,11 @@ import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Partners from './components/Partners/Partners';
 import Contact from './components/Contact/Contact';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App: React.FC = () => {
   return (
-      <>
+    <>
       <Router>
         <Header />
         <Routes>
@@ -20,7 +20,6 @@ const App: React.FC = () => {
         </Routes>
         <Footer />
       </Router>
-      
     </>
   );
 };
