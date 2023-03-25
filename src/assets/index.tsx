@@ -23,6 +23,7 @@ import ourDelivery from './our-delivery.png';
 import contactCall from './contact-call.png';
 import contactSms from './contact-sms.png';
 import contactLocation from './contact-location.png';
+import contactBackground from './contact-background.png';
 
 
 export {
@@ -51,5 +52,5 @@ export {
     contactCall,
     contactSms,
     contactLocation,
-
+    contactBackground,
 }

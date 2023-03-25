@@ -68,7 +68,7 @@
     border: none;
 }
 
-.partners-form input:placeholder-shown {
+.partners-form input::placeholder {
     padding-left: 2rem;
 }
 
@@ -78,7 +78,7 @@
     border-radius: 10px;
     border: none;
 }
-.partners-form textarea:placeholder-shown{
+.partners-form textarea::placeholder{
     padding-left: 2rem;
     font-size: 20px;
 }

@@ -70,7 +70,8 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      <Navbar collapseOnSelect expand="lg"
+      <Navbar
+       collapseOnSelect expand="lg"
         style={{
           height: '100px',
           boxShadow: '0px 5px 40px rgba(0, 0, 0, 0.1)',
@@ -85,7 +86,7 @@ const Header: React.FC = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ border: 'none' }} />
           <Navbar.Collapse id="responsive-navbar-nav" className='bg-white p-3 rounded-bottom'>
             <Nav className="mx-auto">
-              <Nav.Link as={Link} to="/" className='nav-pages' >Home</Nav.Link>
+              <Nav.Link as={Link} to="/" className='nav-pages'>Home</Nav.Link>
               <Nav.Link as={Link} to="/services" className='ps-5 nav-pages'>Services & Pricing</Nav.Link>
               <Nav.Link as={Link} to="/partners" className='ps-5 nav-pages'>Partner with us</Nav.Link>
               <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>

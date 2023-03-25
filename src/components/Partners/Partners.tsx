@@ -40,25 +40,23 @@ const Partners: React.FC = () => {
         </div>
       </section>
       <section>
-        <div className="">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="partner-container my-4" style={{
-                background: `linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(9, 114, 195, 0.87) 0%, rgba(0, 109, 120, 0.75941) 75.74%, rgba(0, 119, 90, 0.66) 100%), url(${partnersReason})`
-              }}>
-                <div className="partners-reasons">
-                  <h1 className='my-4'>Reasons To Partner With Us</h1>
-                </div>
-                <div className="container">
-                  <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
-                    <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
-                    <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
-                    <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
-                    <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
-                    <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
-                  </ul>
-                </div>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="partner-container my-4" style={{
+              background: `linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(180deg, rgba(9, 114, 195, 0.87) 0%, rgba(0, 109, 120, 0.75941) 75.74%, rgba(0, 119, 90, 0.66) 100%), url(${partnersReason})`
+            }}>
+              <div className="partners-reasons">
+                <h1 className='my-4'>Reasons To Partner With Us</h1>
+              </div>
+              <div className="container">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
+                  <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
+                  <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
+                  <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
+                  <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
+                  <li>Lorem ipsum dolor sit amet consectetur. Dictumst sem at nec viverra .</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -100,7 +98,7 @@ const Partners: React.FC = () => {
                   </div>
                   <div>
                     <Form.Group className="mb-3 px-2">
-                      <Form.Control as="textarea" rows={3} placeholder="Tell us about your cleaning needs." />
+                      <Form.Control as="textarea" rows={3} size="lg" placeholder="Tell us about your cleaning needs." />
                     </Form.Group>
                   </div>
                   <button type="submit" className='mx-2 mt-2' style={{
