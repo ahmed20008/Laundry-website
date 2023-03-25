@@ -18,8 +18,11 @@ import deliveryParcel from './delivery-parcel.png';
 import delivery from './delivery.png';
 import partners from './partners.png';
 import partnersReason from './partners-reason.png';
-import ourServices from './our-services.png'
-
+import ourServices from './our-services.png';
+import ourDelivery from './our-delivery.png';
+import contactCall from './contact-call.png';
+import contactSms from './contact-sms.png';
+import contactLocation from './contact-location.png';
 
 
 export {
@@ -44,6 +47,9 @@ export {
     partners,
     partnersReason,
     ourServices,
-    
-    
+    ourDelivery,
+    contactCall,
+    contactSms,
+    contactLocation,
+
 }

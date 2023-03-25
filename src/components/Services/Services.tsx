@@ -8,7 +8,7 @@ import {
 } from 'mdb-react-ui-kit';
 
 import './Services.css';
-import { ourServices } from '../../assets';
+import { ourDelivery, ourServices } from '../../assets';
 
 
 const Services: React.FC = () => {
@@ -63,7 +63,29 @@ const Services: React.FC = () => {
             </div>
           </section>
         </MDBTabsPane>
-        <MDBTabsPane show={fillActive === 'tab2'}>Tab 2 content</MDBTabsPane>
+        <MDBTabsPane show={fillActive === 'tab2'}>
+        <section className='my-4'>
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 my-auto">
+                  <div className="services-heading">
+                    <h1>Delivery</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum.
+                      <br /><br />
+                      Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-6 my-auto">
+                  <div className="services-img">
+                    <img src={ourDelivery} className="img-fluid" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </MDBTabsPane>
       </MDBTabsContent>
     </>
   );

@@ -13,6 +13,9 @@
 .nav-link {
     padding: 20px 30px;
 }
+.nav-tabs .nav-link:hover{
+    cursor: pointer;
+}
 
 .nav-tabs .nav-link {
     font-weight: 600;
