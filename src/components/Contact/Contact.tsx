@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
           <div className='d-flex justify-content-center'>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.940149176946!2d3.413189617044244!3d6.428076698487578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf53280e7648d%3A0x4d01e5de6b847fe5!2sVictoria%20Island%2C%20Lagos!5e0!3m2!1sen!2s!4v1679691624970!5m2!1sen!2s"
-              width="1200"
+              width="100%"
               height="400"
               style={{ border: '0' }}>
             </iframe>
@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
       <section>
         <div className="row">
           <div className="col-md-12">
-            <div className="services-container" style={{
+            <div className="contact-container" style={{
               background: `url(${contactBackground})`
             }}>
               <div className="col-lg-6 col-md-8 col-sm-12">
