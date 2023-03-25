@@ -68,7 +68,7 @@ const Contact: React.FC = () => {
       <section>
         <div className="row">
           <div className="col-md-12">
-            <div className="contact-container" style={{
+            <div className="services-container" style={{
               background: `url(${contactBackground})`
             }}>
               <div className="col-lg-6 col-md-8 col-sm-12">
