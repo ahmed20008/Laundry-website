@@ -1,7 +1,7 @@
 import { Container } from '@mui/system';
 import React from 'react';
-import { cleaning, delivery, deliveryParcel, landingPage, mobileLogo } from '../../assets';
-
+import { cleaning, cleaningLogo, delivery, deliveryLogo, deliveryParcel, landingPage, mobileLogo, pickupLogo } from '../../assets';
+import Button from '@mui/material/Button';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-            <section>
+            <section className='my-5'>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
@@ -78,6 +78,47 @@ const Home: React.FC = () => {
                                 </div>
                                 <h4 className='text-center mb-3'>HOW OUR SERVICES WORK</h4>
                             </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <div className="how-work my-5">
+                                <div className="card">
+                                    <div className='d-flex justify-content-center'>
+                                        <img src={pickupLogo} className="img-fluid" alt="" />
+                                    </div>
+                                    <h3 className='pt-3'>Pick-up/Drop off</h3>
+                                    <p>All members receive bonuses and/or discounts. Sign up for more information.</p>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <div className="dots">.........</div> */}
+                        <div className="col-md-4">
+                            <div className="how-work my-5">
+                                <div className="card">
+                                    <div className='d-flex justify-content-center'>
+                                        <img src={cleaningLogo} className="img-fluid" alt="" />
+                                    </div>
+                                    <h3 className='pt-3'>Cleaning</h3>
+                                    <p>We use premium materials, technologies and guarantee treatment with care.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="how-work my-5">
+                                <div className="card">
+                                    <div className='d-flex justify-content-center'>
+                                        <img src={deliveryLogo} className="img-fluid" alt="" />
+                                    </div>
+                                    <h3 className='pt-3'>Delivery</h3>
+                                    <p>Free delivery upon order prior request within 24 hours after cleaning.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="d-flex justify-content-center">
+                            <Button variant="contained" size="medium" style={{ background: '#35A7FF', }}>
+                                BOOK OUR SERVICES NOW
+                            </Button>
                         </div>
                     </div>
                 </div>
@@ -133,7 +174,7 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="card my-5" style={{ background: '#fff', border: '2px solid #fff', borderRadius: '13px' }}>
+                            <div className="card my-5" style={{ background: '#fff', border: '2px solid #000', borderRadius: '13px' }}>
                                 <div className="plans-card">
                                     <div className="plan-type-premium">
                                         <h3>STANDARD</h3>
@@ -206,6 +247,10 @@ const Home: React.FC = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                                        
             </section>
 
         </>
