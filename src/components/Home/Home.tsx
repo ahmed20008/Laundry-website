@@ -1,6 +1,6 @@
 import { Container } from '@mui/system';
 import React from 'react';
-import { cleaning, cleaningLogo, delivery, deliveryLogo, deliveryParcel, landingPage, mobileLogo, pickupLogo } from '../../assets';
+import { cleaning, cleaningLogo, delivery, deliveryLogo, deliveryParcel, landingPage, mobileLogo, pickupLogo, WhyUsImg } from '../../assets';
 import Button from '@mui/material/Button';
 import './Home.css';
 
@@ -249,10 +249,57 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            <section>
-                                        
+            <section className='my-5'>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="why-us">
+                                <h2>Delivering Clean Clothes and Peace of Mind</h2>
+                                <h4 className='pt-4 pb-5'>REASONS TO CHOOSE US</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <div className="why-us-card">
+                                <div className="card p-2 ">
+                                    <div>
+                                        <h3>Professional Care</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
+                                    </div>
+                                    <div className='pt-5'>
+                                        <h3>Excellent Results</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 my-auto">
+                            <div className="why-us-img text-center">
+                                <img src={WhyUsImg} className="img-fluid" alt="" />
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                        <div className="why-us-card">
+                                <div className="card">
+                                    <div>
+                                        <h3>Fast Delivery</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
+                                    </div>
+                                    <div className='pt-5'>
+                                        <h3>Happy Customer</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+            
+            <section>
 
+            </section>
         </>
     );
 };
