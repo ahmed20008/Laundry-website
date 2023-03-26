@@ -1,6 +1,6 @@
-import { Container } from '@mui/system';
 import React from 'react';
 import { cleaning, cleaningLogo, delivery, deliveryLogo, deliveryParcel, landingPage, mobileLogo, pickupLogo, WhyUsImg } from '../../assets';
+import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 import './Home.css';
 
@@ -265,10 +265,16 @@ const Home: React.FC = () => {
                                 <div className="card p-2 ">
                                     <div>
                                         <h3>Professional Care</h3>
+                                        <div className="d-flex justify-content-center">
+                                            <div className="why-us-underline mb-3"></div>
+                                        </div>
                                         <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
                                     </div>
                                     <div className='pt-5'>
                                         <h3>Excellent Results</h3>
+                                        <div className="d-flex justify-content-center">
+                                            <div className="why-us-underline mb-3"></div>
+                                        </div>
                                         <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
                                     </div>
                                 </div>
@@ -280,14 +286,20 @@ const Home: React.FC = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                        <div className="why-us-card">
+                            <div className="why-us-card">
                                 <div className="card">
                                     <div>
                                         <h3>Fast Delivery</h3>
+                                        <div className="d-flex justify-content-center">
+                                            <div className="why-us-underline mb-3"></div>
+                                        </div>
                                         <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
                                     </div>
                                     <div className='pt-5'>
                                         <h3>Happy Customer</h3>
+                                        <div className="d-flex justify-content-center">
+                                            <div className="why-us-underline mb-3"></div>
+                                        </div>
                                         <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. </p>
                                     </div>
                                 </div>
@@ -296,9 +308,32 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
-            <section>
 
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="partner-us">
+                                <h2>Partner with us</h2>
+                                <p>Sign up for our news letter and keep up to our latest deals </p>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="partners-form">
+                                <Form>
+                                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                                        <div className='d-flex'>
+                                            <Form.Control type="email" placeholder="Your e-mail address" />
+                                            <Button variant="contained" type='submit' size="large">
+                                                SUBSCRIBE
+                                            </Button>
+                                        </div>
+                                    </Form.Group>
+                                </Form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </>
     );
