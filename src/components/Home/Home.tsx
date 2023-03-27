@@ -310,7 +310,7 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            <section style={{ background: '#2A87CE', height: '370px' }}>
+            <section style={{ background: '#2A87CE', height: '372px' }}>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
