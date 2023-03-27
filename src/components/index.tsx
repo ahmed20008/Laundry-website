@@ -4,6 +4,7 @@ import Home from "./Home/Home";
 import Services from "./Services/Services";
 import Partners from "./Partners/Partners";
 import Contact from "./Contact/Contact";
+import Slider from "./Home/Slider";
 export {
     Header,
     Footer,
@@ -11,4 +12,5 @@ export {
     Services,
     Partners,
     Contact,
+    Slider,
 }

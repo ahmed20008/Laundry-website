@@ -28,7 +28,8 @@ import servicesBackground from './services-background.jpg';
 import pickupLogo from './pickup-logo.png';
 import cleaningLogo from './cleaning-logo.png';
 import deliveryLogo from './delivery-logo.png';
-import WhyUsImg from './why-us.png';
+import WhyUsImg from './why-us.png';;
+import clientImg from './client-img.png';
 
 
 export {
@@ -63,4 +64,6 @@ export {
     cleaningLogo,
     deliveryLogo,
     WhyUsImg,
+    clientImg,
+    
 }

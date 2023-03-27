@@ -1,6 +1,7 @@
 import React from 'react';
 import { cleaning, cleaningLogo, delivery, deliveryLogo, deliveryParcel, landingPage, mobileLogo, pickupLogo, WhyUsImg } from '../../assets';
 import Form from 'react-bootstrap/Form';
+import Slider from '../Home/Slider';
 import Button from '@mui/material/Button';
 import './Home.css';
 
@@ -309,7 +310,25 @@ const Home: React.FC = () => {
                 </div>
             </section>
 
-            <section>
+            <section style={{ background: '#2A87CE', height: '370px' }}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="testimonial">
+                                <h4 className='my-4'>WHAT OUR CUSTOMERS HAVE TO SAY</h4>
+                                <div className="d-flex justify-content-center">
+                                    <div className="why-us-underline mb-3"></div>
+                                </div>
+                                <div>
+                                    <Slider />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='py-5'>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
@@ -318,13 +337,22 @@ const Home: React.FC = () => {
                                 <p>Sign up for our news letter and keep up to our latest deals </p>
                             </div>
                         </div>
-                        <div className="col-md-6">
-                            <div className="partners-form">
+                        <div className="col-md-6 my-auto">
+                            <div className="partner-us-form">
                                 <Form>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <div className='d-flex'>
                                             <Form.Control type="email" placeholder="Your e-mail address" />
-                                            <Button variant="contained" type='submit' size="large">
+                                            <Button
+                                                variant="contained"
+                                                type='submit'
+                                                size="large"
+                                                style={{
+                                                    background: '#35A7FF',
+                                                    padding: '10px 40px',
+                                                    marginLeft: '1rem',
+                                                    borderRadius: '10px',
+                                                }}>
                                                 SUBSCRIBE
                                             </Button>
                                         </div>
