@@ -11,7 +11,7 @@ const Testimonials: React.FC = () => {
       infiniteLoop={true}
       showThumbs={false}
       showStatus={false}
-      // autoPlay={true}
+      autoPlay={true}
       interval={6100}
     >
       <div>

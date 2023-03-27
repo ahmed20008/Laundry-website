@@ -24,7 +24,7 @@
     display: none;
 }
 
-h3 {
+.carousel h3 {
     color: #fff;
     font-weight: 700;
     font-size: 12px;
@@ -68,11 +68,17 @@ h3 {
     top: 35% !important;
 }
 
+@media only screen and (max-width: 991px) {
+    .myCarousel p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
 
 @media only screen and (max-width: 934px) {
     .carousel-root {
         outline: 0;
-        width: 93% !important;
+        width: 100% !important;
         margin: auto !important;
     }
 
@@ -86,9 +92,7 @@ h3 {
         margin-left: auto;
         margin-right: auto;
         padding-top: 8%;
-        /* padding-bottom: 12.5%; */
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-bottom: 12.5%;
         height: 269px;
     }
 
