@@ -95,7 +95,7 @@ const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
               <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
             </Nav>
             <Nav>
-              <Button onClick={onButtonClick}>Swap roles</Button>
+              <Nav.Link as={Link} to="/dashboard" onClick={onButtonClick}>Swap roles</Nav.Link>
               <Button
                 variant="contained"
                 style={{
