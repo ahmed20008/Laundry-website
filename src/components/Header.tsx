@@ -87,7 +87,7 @@ const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
             <Navbar.Brand href="/"><img src={logo} alt="" /></Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ border: 'none' }} />
-          <Navbar.Collapse id="responsive-navbar-nav" className='bg-white p-3 rounded-bottom'>
+          <Navbar.Collapse id="responsive-navbar-nav" className='bg-white nav-sm rounded-bottom'>
             <Nav className="mx-auto">
               <Nav.Link as={Link} to="/" className='nav-pages'>Home</Nav.Link>
               <Nav.Link as={Link} to="/services" className='ps-5 nav-pages'>Services & Pricing</Nav.Link>

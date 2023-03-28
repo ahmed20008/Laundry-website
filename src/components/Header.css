@@ -51,6 +51,9 @@
         padding-left: 0 !important;
         padding-bottom: 1rem;
     }
+    .nav-sm{
+        padding: 1.5rem;
+    }
 }
 @media only screen and (max-width: 500px){
     .rectengle-2{
