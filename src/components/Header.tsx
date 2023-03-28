@@ -48,20 +48,20 @@ const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
           <div className="col-md-12">
             <div className='container-fluid'>
               <div className='d-flex justify-content-end'>
-                <div className="contact pe-3">
+                <div className="contact pe-3 my-auto">
                   <a href='#' className='text-white text-decoration-none'>
                     <p>+234 (123) 456 7890</p>
                   </a>
                 </div>
-                <div className="contact pe-2">
-                  <img src={LoginLogo} />
+                <div className="contact pe-2 my-auto">
+                  <img src={LoginLogo} width="20px" />
                   <button onClick={() => setLoginModalShow(true)} className='text-white'>
                     Login
                   </button>
                 </div>
                 <Login show={LoginmodalShow} onHide={() => setLoginModalShow(false)} />
-                <div className="contact pe-4">
-                  <img src={SignupLogo} />
+                <div className="contact pe-4 my-auto">
+                  <img src={SignupLogo} width="20px" />
                   <button onClick={() => setSignupModalShow(true)} className='text-white'>
                     Sign up
                   </button>
@@ -74,7 +74,7 @@ const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
       </div>
 
       <Navbar
-       collapseOnSelect expand="lg"
+        collapseOnSelect expand="lg"
         style={{
           height: '100px',
           boxShadow: '0px 5px 40px rgba(0, 0, 0, 0.1)',
@@ -96,18 +96,19 @@ const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
             </Nav>
             <Nav>
               <Nav.Link as={Link} to="/dashboard" onClick={onButtonClick}>Swap roles</Nav.Link>
-              <Button
-                variant="contained"
-                style={{
-                  background: '#35A7FF',
-                  borderRadius: '10px',
-                  textTransform: 'capitalize',
-                  gap: '10',
-                  fontSize: '20px',
-                }}
-                className="px-5 py-2 nav-btn">
-                schedule a pickup
-              </Button>
+              <div className='my-auto'>
+                <Button
+                  variant="contained"
+                  size="medium"
+                  style={{
+                    background: '#35A7FF',
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                  }}
+                  className="px-5 py-2 nav-btn">
+                  schedule a pickup
+                </Button>
+              </div>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Header, Footer } from './components';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Role } from "./constants/roles";
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Partners from './components/Partners/Partners';
 import Contact from './components/Contact/Contact';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Role } from "./constants/roles";
 import UserDashboard from './components/Dashboard/UserDashboard/UserDashboard';
 import AdminDashboard from './components/Dashboard/AdminDashboard/AdminDashboard';
 

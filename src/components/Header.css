@@ -1,6 +1,6 @@
 .rectengle-2{
     background: #42515D;
-    height: 44px;
+    height: 35px;
     display: grid;
     align-items: center;
 }
@@ -9,7 +9,7 @@
     padding-left: 12px;
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
 }
 .rectengle-2 .contact button{
     background-color: transparent;
