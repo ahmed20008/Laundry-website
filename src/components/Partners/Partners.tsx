@@ -20,6 +20,7 @@ const Partners: React.FC = () => {
               <div className="partners-text my-3">
                 <p>Lorem ipsum dolor sit amet consectetur. Lacus id arcu rhoncus convallis eu. Nunc mattis enim ipsum velit rhoncus faucibus dignissim rhoncus sapien. Lorem ipsum dolor sit amet.</p>
               </div>
+              <a href="#get-in-touch">
               <button className='btn my-3' style={{
                 background: '#35A7FF',
                 borderRadius: '10px',
@@ -30,6 +31,7 @@ const Partners: React.FC = () => {
               }}>
                 Get in Touch
               </button>
+              </a>
             </div>
             <div className="col-md-6 my-auto">
               <div className="partners-img">
@@ -62,7 +64,7 @@ const Partners: React.FC = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id='get-in-touch'>
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -107,6 +109,7 @@ const Partners: React.FC = () => {
                     borderRadius: '10px',
                     color: '#fff',
                     border: 'none',
+                    fontSize: '20px',
                   }}>
                     Get in touch
                   </button>

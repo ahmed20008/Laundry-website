@@ -30,6 +30,7 @@ import cleaningLogo from './cleaning-logo.png';
 import deliveryLogo from './delivery-logo.png';
 import WhyUsImg from './why-us.png';;
 import clientImg from './client-img.png';
+import dashboardBackground from './dashboard-background.png';
 
 
 export {
@@ -65,5 +66,6 @@ export {
     deliveryLogo,
     WhyUsImg,
     clientImg,
+    dashboardBackground,
     
 }

@@ -11,13 +11,14 @@ interface LoginProps {
     onHide: () => void;
     show: boolean;
 }
+interface ModalStates {
+    SignupmodalShow: boolean;
+}
 
 export const Login: FC<LoginProps> = ({ onHide, show }) => {
-    interface ModalStates {
-        SignupmodalShow: boolean;
-      }
-      
-      const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
+
+
+    const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
 
     return (
         <div>
@@ -34,8 +35,8 @@ export const Login: FC<LoginProps> = ({ onHide, show }) => {
                     <h4>Welcome Back!</h4>
                     <div className='login-form'>
                         <Form>
-                            <Form.Control type="email" placeholder="Email Address" className='mb-3 signup-form'/>
-                            <Form.Control type="password" placeholder="Password" className='signup-form'/>
+                            <Form.Control type="email" placeholder="Email Address" className='mb-3 signup-form' />
+                            <Form.Control type="password" placeholder="Password" className='signup-form' />
 
                             <div className='inline-content'>
                                 <Form.Group className="my-3">
@@ -44,11 +45,12 @@ export const Login: FC<LoginProps> = ({ onHide, show }) => {
                                 </Form.Group>
                                 <a href="#" className='my-3 forget-pass'>Forgot password?</a>
                             </div>
-                            
+
                             <div className='inline-content-btn'>
                                 <Button
                                     variant="contained"
-                                    className='login-btn'>
+                                    className='login-btn'
+                                    type='submit'>
                                     Log in
                                 </Button>
                                 <div className='fandg'>
@@ -63,22 +65,22 @@ export const Login: FC<LoginProps> = ({ onHide, show }) => {
                         </Form>
                     </div>
                     <div className='pt-2'>
-                        <p>Don’t have an account? 
-                            <Button 
-                            onClick={() => {
-                                setSignupModalShow(true);
-                            }}
-                            
-                            style={{
-                                backgroundColor: 'transparent',
-                                border: 'none',
-                                fontWeight: '400',
-                                color: '#5FA1D5',
-                                letterSpacing: '0.03em',
-                                textDecoration: 'underline',
-                        }}> Sign up</Button></p>
+                        <p>Don’t have an account?
+                            <Button
+                                onClick={() => {
+                                    setSignupModalShow(true);
+                                }}
+
+                                style={{
+                                    backgroundColor: 'transparent',
+                                    border: 'none',
+                                    fontWeight: '400',
+                                    color: '#5FA1D5',
+                                    letterSpacing: '0.03em',
+                                    textDecoration: 'underline',
+                                }}> Sign up</Button></p>
                     </div>
-                  <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
+                    <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
                 </Modal.Body>
             </Modal>
         </div>

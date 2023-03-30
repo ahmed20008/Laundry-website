@@ -6,6 +6,7 @@ import { facebookBtn, googleBtn } from '../../assets';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
 import { useState } from 'react';
+import { Login } from './Login';
 
 import './Modals.css';
 
@@ -16,7 +17,10 @@ interface SignupProps {
 
 export const Signup: FC<SignupProps> = ({ onHide, show }) => {
 
+  //Phone no input
   const [value, setValue] = useState<string>();
+
+  const [LoginmodalShow, setLoginModalShow] = useState<boolean>(false);
 
   return (
     <div>
@@ -57,9 +61,7 @@ export const Signup: FC<SignupProps> = ({ onHide, show }) => {
                 <Button
                   variant="contained"
                   className='signup-btn'
-                  style={{
-                    
-                  }}>
+                  type='submit'>
                   Create Account
                 </Button>
                 <div className='fandg'>
@@ -76,6 +78,9 @@ export const Signup: FC<SignupProps> = ({ onHide, show }) => {
           <div className='pt-2'>
             <p>Already a member?
               <Button
+              onClick={() => {
+                setLoginModalShow(true);
+            }}
                 style={{
                   backgroundColor: 'transparent',
                   border: 'none',
@@ -85,10 +90,8 @@ export const Signup: FC<SignupProps> = ({ onHide, show }) => {
                   textDecoration: 'underline',
                 }}> Log in</Button></p>
           </div>
+          <Login show={LoginmodalShow} onHide={() => setLoginModalShow(false)} />
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button onClick={onHide}>Close</Button>
-        </Modal.Footer> */}
       </Modal>
     </div>
   );
