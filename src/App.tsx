@@ -7,8 +7,7 @@ import Home from './components/Home/Home';
 import Services from './components/Services/Services';
 import Partners from './components/Partners/Partners';
 import Contact from './components/Contact/Contact';
-import UserDashboard from './components/Dashboard/UserDashboard/UserDashboard';
-import AdminDashboard from './components/Dashboard/AdminDashboard/AdminDashboard';
+import Panel from "./components/Dashboard/Panel";
 
 interface ParentProps {}
 
@@ -33,9 +32,7 @@ const App: React.FC<ParentProps> = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/dashboard" element={
-            role === 'user' ? <UserDashboard /> : <AdminDashboard />
-          } />
+          <Route path="/dashboard" element={ <Panel /> } />
         </Routes>
         <Footer />
       </Router>

@@ -3,7 +3,11 @@ import React from 'react'
 const AdminDashboard: React.FC = () => {
   return (
     <div>
-        <h1>ADMIN DASHBOARD</h1>
+        <Button>My Dashboard</Button>
+        <Button>My Dashboard</Button>
+        <Button>My Dashboard</Button>
+        <Button>My Dashboard</Button>
+        <Button>My Dashboard</Button>
     </div>
   )
 }
