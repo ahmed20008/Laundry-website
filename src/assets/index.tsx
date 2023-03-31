@@ -31,7 +31,9 @@ import deliveryLogo from './delivery-logo.png';
 import WhyUsImg from './why-us.png';;
 import clientImg from './client-img.png';
 import dashboardBackground from './dashboard-background.png';
-
+import SearchIcon from './search-icon.png';
+import notificationLogo from './notification.png';
+import notify from './notify.png';
 
 export {
     logo,
@@ -67,5 +69,7 @@ export {
     WhyUsImg,
     clientImg,
     dashboardBackground,
-    
+    SearchIcon,
+    notificationLogo,
+    notify,
 }
