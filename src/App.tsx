@@ -12,21 +12,10 @@ import Panel from "./components/Dashboard/Panel";
 interface ParentProps {}
 
 const App: React.FC<ParentProps> = () => {
-  const [role, setRole] = useState<String>('admin')
-  interface User {
-    uid: string;
-    email: string;
-    role: Role;
-  }
-  
-  const swapRoles = () => {
-    setRole( role == 'admin' ? 'user' : 'admin');
-  }
-  
   return (
     <>
       <Router>
-        <Header onButtonClick={swapRoles}/>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />

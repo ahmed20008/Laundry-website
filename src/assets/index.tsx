@@ -34,7 +34,23 @@ import dashboardBackground from './dashboard-background.png';
 import SearchIcon from './search-icon.png';
 import notificationLogo from './notification.png';
 import notify from './notify.png';
-
+import avatar from './Avatar.png';
+import editAvatar from './edit-avatar.png';
+import settingLogo from './setting-logo.png';
+import dashboardBtn from './dashboard-btn.png';
+import personalDetailBtn from './personaldetail-btn.png';
+import subscriptionBtn from './subscription-btn.png';
+import messagesBtn from './messages-btn.png';
+import logoutBtn from './logout-btn.png';
+import myCostumersBtn from './costumer-btn.png';
+import manageOrderBtn from './manageorder-btn.png';
+import financialBtn from './finance-btn.png';
+import logout from './logout-btn.png';
+import myOrderBtn from './myOrder-btn.png';
+import invoice from './Invoice.png';
+import helpCenter from './HelpCenter.png';
+import myWallet from './MyWallet.png';
+import refer from './refer.png';
 export {
     logo,
     twitter,
@@ -72,4 +88,24 @@ export {
     SearchIcon,
     notificationLogo,
     notify,
+    avatar,
+    editAvatar,
+    settingLogo,
+    dashboardBtn,
+    personalDetailBtn,
+    subscriptionBtn,
+    messagesBtn,
+    logoutBtn,
+    myCostumersBtn,
+    manageOrderBtn,
+    financialBtn,
+    logout,
+    myOrderBtn,
+    invoice,
+    helpCenter,
+    myWallet,
+    refer,
+    
+
+
 }

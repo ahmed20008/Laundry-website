@@ -10,12 +10,7 @@ import { Login } from './Modals/Login';
 import { Signup } from './Modals/Signup';
 import { Link } from 'react-router-dom';
 
-
-interface ChildProps {
-  onButtonClick: () => void;
-}
-
-const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
+const Header: React.FC = () => {
   const [isSticky, setIsSticky] = useState(false);
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
@@ -95,7 +90,6 @@ const Header: React.FC<ChildProps> = ({ onButtonClick }) => {
               <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/dashboard" onClick={onButtonClick}>Swap roles</Nav.Link>
               <div className='my-auto'>
                 <Button
                   variant="contained"

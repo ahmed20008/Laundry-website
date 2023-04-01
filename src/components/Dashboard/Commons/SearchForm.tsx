@@ -1,4 +1,3 @@
-import { height } from '@mui/system';
 import React, { useState } from 'react';
 import { SearchIcon } from '../../../assets';
 

@@ -1,23 +1,32 @@
-:root{
+:root {
     --white: #fff;
     --linear-blue: rgba(53, 167, 255, 0.87);
     --linear-2: linear-gradient(180deg, rgba(9, 114, 195, 0.87) 0%, rgba(17, 183, 200, 0.75941) 67.77%, rgba(0, 198, 150, 0.66) 100%);
     --linear-green: linear-gradient(0deg, #35FFCF, #35FFCF);
 }
-html{
+
+html {
     height: 1000px;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-p{
+
+p {
     padding: 0%;
     margin: 0%;
 }
+
+.panel-shadow {
+    box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
 @media screen and (max-width: 767px) {
-    .order-xs-1{
+    .order-xs-1 {
         order: 1;
     }
-    .order-xs-2{
+
+    .order-xs-2 {
         order: 2;
     }
 }

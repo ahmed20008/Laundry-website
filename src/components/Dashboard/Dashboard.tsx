@@ -1,18 +1,20 @@
 import React, { ReactNode } from 'react';
-import { dashboardBackground, notificationLogo, notify } from '../../assets';
-import SearchForm from './Common/SearchForm';
-import Notification from './Common/Notification';
+import { dashboardBackground } from '../../assets';
+import SearchForm from './Commons/SearchForm';
+import Notification from './Commons/Notification';
 
 
-interface Props {
-  children: ReactNode;
+interface DashboardProps {
+  isAdmin: Boolean,
+  name: String,
+  children: ReactNode,
 }
 
-export function Dashboard(props: Props) {
+const Dashboard: React.FC<DashboardProps> = (props: DashboardProps) => {
   return (
     <>
       <section style={{
-        position: 'relative', /* make the section a positioned container for absolute positioning of its children */
+        position: 'relative',
       }}>
         <div style={{
           position: 'absolute',
@@ -32,27 +34,30 @@ export function Dashboard(props: Props) {
         }}>
           <div className='pt-5'>
             <div className='d-flex justify-content-end py-2'>
-              <Notification/>
+              <Notification />
             </div>
-            
+
             <div className='d-flex justify-content-between'>
               <h1 style={{
                 fontWeight: '700',
                 fontSize: '35px',
                 lineHeight: '52px',
                 color: '#FFFFFF',
-              }}>Hi Frederick, Welcome</h1>
+              }}>
+                {props.name}
+              </h1>
               <SearchForm />
             </div>
           </div>
         </div>
       </section>
-      <div className='container'>
-        <div className="row">
-          {props.children}
-        </div>
+      <div className='container pb-5'>
+        {props.children}
       </div>
     </>
 
   );
 }
+
+
+export default Dashboard;

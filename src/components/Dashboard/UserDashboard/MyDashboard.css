@@ -1,0 +1,151 @@
+.user-dash-btn {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.user-dash-btn p {
+    font-weight: 600;
+    font-size: 14px;
+    color: #818181;
+    padding-top: 0.5rem;
+}
+
+.packages h2 {
+    color: #818181;
+    font-size: 15px;
+}
+
+.our-plans {
+    padding: 30px 15px;
+}
+
+.plans-type h3 {
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+}
+
+.plans-type p {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 19px;
+    color: #818181;
+}
+
+.our-price h1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.our-price h1 span {
+    font-size: 10px;
+    position: relative;
+    top: -3px;
+}
+
+.plans-points ul li:before {
+    content: "\2713";
+    margin-right: 0.5rem;
+    color: green;
+}
+
+.plans-points ul {
+    padding: 0;
+}
+
+.plans-points ul li {
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.our-plans .subscribed p {
+    color: #fff;
+    background-color: rgb(59, 173, 59);
+    position: relative;
+    top: -20px;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.redeem .card {
+    background: linear-gradient(90deg, rgba(9, 114, 195, 0.87) 0%, rgba(17, 183, 200, 0.7594) 67.77%, rgba(0, 198, 150, 0.66) 100%);
+    border: none;
+    border-radius: 14px;
+    offset: 0px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.redeem .card h2 {
+    font-size: 15px;
+    color: #fff;
+}
+
+.redeem .card h1 {
+    font-family: 'Poppins';
+    font-size: 50px;
+    color: #fff;
+}
+
+.stats .vertical-line {
+    border-left: 1px solid #fff;
+    height: 100px;
+}
+
+.stats .card {
+    background: #20679E;
+    color: #fff;
+    height: 189px;
+    border-radius: 14px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.stats .card h2 {
+    font-size: 15px;
+}
+
+.stats .card p {
+    font-size: 12px;
+}
+
+.stats .card h1 {
+    font-size: 30px;
+}
+
+.refer .card {
+    background-size: cover;
+    position: relative;
+    height: 231px;
+    border-radius: 10px;
+}
+.refer .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 71, 109, 0.8); 
+    border-radius: 10px;
+}
+.refer .card-content {
+    position: relative;
+    z-index: 1;
+}
+.refer .card-content h2{
+    font-size: 15px;
+    color: #fff;
+}
+.refer .card-content h3{
+    font-size: 20px;
+    color: #fff;
+}
+.refer .card-content p{
+    font-size: 16px;
+    color: #fff;
+}
