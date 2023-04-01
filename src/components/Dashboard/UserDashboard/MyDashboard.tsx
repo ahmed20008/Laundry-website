@@ -189,7 +189,8 @@ const MyDashboard: React.FC<Props> = () => {
                     variant='contained'
                     className='px-5 mt-1'
                     style={{
-                      background: '#35A7FF'
+                      background: '#35A7FF',
+                      borderRadius: '10px'
                     }}
                   >
                     Redeem</Button>
@@ -230,6 +231,7 @@ const MyDashboard: React.FC<Props> = () => {
                     style={{
                       background: '#35A7FF',
                       fontSize: '16px',
+                      borderRadius: '10px'
                     }}>
                     Redeem</Button>
                 </div>

@@ -5,6 +5,7 @@ import PersonalDetail from './PersonalDetail';
 import Messages from '../Commons/Messages';
 import { dashboardBtn, logoutBtn, messagesBtn, personalDetailBtn, subscriptionBtn } from '../../../assets';
 import SideBar from '../Commons/SideBar';
+import Logout from '../Commons/Logout';
 
 interface UserDashboardProps {
   isAdmin: Boolean,
@@ -27,6 +28,8 @@ const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) 
         return <Subscription />;
       case 3:
         return <Messages />;
+      case 4:
+        return <Logout />;
       default:
         return <MyDashboard />;
     }
