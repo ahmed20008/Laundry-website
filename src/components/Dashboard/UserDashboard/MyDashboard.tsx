@@ -3,49 +3,40 @@ import { helpCenter, invoice, myOrderBtn, myWallet, refer } from '../../../asset
 import Button from '@mui/material/Button';
 import './MyDashboard.css';
 
-interface Props {
-  // Props go here
+interface Button {
+  name: string;
+  logo: string;
 }
 
-const MyDashboard: React.FC<Props> = () => {
+interface MyDashboardProps {
+  buttons: Button[],
+  onButtonClick: (id: Number) => void,
+  menuStartIndex: Number,
+}
+
+
+const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuStartIndex }: MyDashboardProps) => {
+  console.log("butn",buttons)
   return (
     <>
       <div className="row">
         <div className="col-lg-8 col-md-12 px-1">
           <div className="bg-white mb-2 panel-shadow">
             <div className="user-dash-btn p-4">
-              <div className='m-3'>
-                <button className='border-0 bg-transparent p-0'>
-                  <div className="card border-0 bg-transparent">
-                    <img src={myOrderBtn} className='img-fluid' />
-                    <p>My Orders</p>
-                  </div>
-                </button>
-              </div>
-              <div className='m-3'>
-                <button className='border-0 bg-transparent p-0'>
-                  <div className="card border-0 bg-transparent">
-                    <img src={invoice} className='img-fluid' />
-                    <p>Invoice</p>
-                  </div>
-                </button>
-              </div>
-              <div className='m-3'>
-                <button className='border-0 bg-transparent p-0'>
-                  <div className="card border-0 bg-transparent">
-                    <img src={myWallet} className='img-fluid' />
-                    <p>My Wallet</p>
-                  </div>
-                </button>
-              </div>
-              <div className='m-3'>
-                <button className='border-0 bg-transparent p-0'>
-                  <div className="card border-0 bg-transparent">
-                    <img src={helpCenter} className='img-fluid' />
-                    <p>Help Center</p>
-                  </div>
-                </button>
-              </div>
+              {
+                buttons.map((btn, index) => {
+                  return (
+                    <div className='m-3'>
+                      <button className='border-0 bg-transparent p-0' onClick={() => onButtonClick( Number(index) + Number(menuStartIndex)) }>
+                        <div className="card border-0 bg-transparent">
+                          <img src={btn.logo} className='img-fluid' />
+                          <p>{btn.name}</p>
+                        </div>
+                      </button>
+                    </div>
+                  )
+                })
+              }
             </div>
           </div>
           <div className="bg-white panel-shadow">
