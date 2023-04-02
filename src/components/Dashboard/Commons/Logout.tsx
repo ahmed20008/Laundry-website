@@ -12,7 +12,7 @@ interface LogoutProps {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Logout = ({open, setOpen}: LogoutProps) => {
+const Logout = ({ open, setOpen }: LogoutProps) => {
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -30,18 +30,25 @@ const Logout = ({open, setOpen}: LogoutProps) => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"Logout?"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Are you sure you want to log out?
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose} autoFocus>
-            Logout
-          </Button>
-        </DialogActions>
+        <div className='px-5 py-4'>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              Are you sure you want to  log out?
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions style={{ display: 'flex', justifyContent: 'center'}}>
+            <div className='pe-2'>
+              <Button onClick={handleClose} variant='outlined' style={{borderColor: '#35A7FF', color: '#35A7FF', fontSize: '15px'}}>
+                Cancel
+              </Button>
+            </div>
+            <div className='ps-2'>
+              <Button onClick={handleClose} variant='contained' style={{backgroundColor: '#35A7FF', color: '#fff', fontSize: '15px'}}>
+                Logout
+              </Button>
+            </div>
+          </DialogActions>
+        </div>
       </Dialog>
     </div>
 

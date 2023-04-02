@@ -5,6 +5,7 @@ import Services from "./Services/Services";
 import Partners from "./Partners/Partners";
 import Contact from "./Contact/Contact";
 import Slider from "./Home/Slider";
+import SchedulePickup from "./SchedulePickup/SchedulePickup";
 export {
     Header,
     Footer,
@@ -13,4 +14,6 @@ export {
     Partners,
     Contact,
     Slider,
+    SchedulePickup,
+    
 }

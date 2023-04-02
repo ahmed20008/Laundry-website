@@ -4,14 +4,21 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from '@mui/material/Button';
 import { logo, SignupLogo, LoginLogo } from '../assets';
-
-import './Header.css';
 import { Login } from './Modals/Login';
 import { Signup } from './Modals/Signup';
 import { Link } from 'react-router-dom';
+import './Header.css';
+
+
+interface ModalStates {
+  LoginmodalShow: boolean;
+  SignupmodalShow: boolean;
+}
 
 const Header: React.FC = () => {
+
   const [isSticky, setIsSticky] = useState(false);
+
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
       setIsSticky(true);
@@ -27,11 +34,6 @@ const Header: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  interface ModalStates {
-    LoginmodalShow: boolean;
-    SignupmodalShow: boolean;
-  }
 
   const [LoginmodalShow, setLoginModalShow] = useState<boolean>(false);
   const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
