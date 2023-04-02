@@ -17,3 +17,20 @@
     color: #818181;
     font-weight: 500;
 }
+.subscription-data{
+    border: 1px solid #dee2e6 ;
+}
+.subscription-data h2{
+    color: #818181;
+    font-size: 18px;
+}
+.subscription-table .table-heading{
+    font-size: 18px;
+    font-weight: 700;
+    color: #818181;
+}
+.subscription-data .table-body{
+    font-size: 18px;
+    color: #818181;
+    font-weight: 500;
+}

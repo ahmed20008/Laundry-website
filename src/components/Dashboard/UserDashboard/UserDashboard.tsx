@@ -18,7 +18,7 @@ interface UserDashboardProps {
 }
 
 const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) => {
-  const [currentComponent, setCurrentComponent] = useState<Number>(5);
+  const [currentComponent, setCurrentComponent] = useState<Number>(0);
   const [name, setName] = useState<String>("Frederick Jones");
   const [email, setEmail] = useState<String>("frederickjones10@gmail.com");
   const [isAdmin, setIsAdmin] = useState<Boolean>(props.isAdmin);
