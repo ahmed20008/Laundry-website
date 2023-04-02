@@ -23,7 +23,7 @@ const Services: React.FC = () => {
   };
 
   return (
-    <>
+    <div className='service-pricing'>
       <div className="row" style={{ backgroundColor: '#F4F4F4' }}>
         <div className="col-lg-6 col-md-12 col-sm-12">
           <MDBTabs fill className='mb-3'>
@@ -325,7 +325,7 @@ const Services: React.FC = () => {
             </section>
         </MDBTabsPane>
       </MDBTabsContent>
-    </>
+    </div>
   );
 }
 

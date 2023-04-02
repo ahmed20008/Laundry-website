@@ -5,6 +5,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import Home from '../../Home/Home';
 
 const Logout = () => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -20,7 +21,7 @@ const Logout = () => {
   return (
     <div>
       <Button variant="contained" onClick={handleClickOpen}>
-        Open alert dialog
+        Logout
       </Button>
       <Dialog
         open={open}
@@ -28,23 +29,21 @@ const Logout = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Logout?"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
+            Are you sure you want to log out?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
+          <Button onClick={handleClose}>Cancel</Button>
           <Button onClick={handleClose} autoFocus>
-            Agree
+            Logout
           </Button>
         </DialogActions>
       </Dialog>
     </div>
+
   );
 }
 export default Logout;

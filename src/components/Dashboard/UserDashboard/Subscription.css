@@ -1,0 +1,19 @@
+.subscription-heading h1{
+    color: #818181;
+    font-size: 24px;
+    font-weight: 500;
+}
+.subscription-heading p{
+    font-size: 14px;
+    color: #9F9F9F;
+}
+.subscription .nav-tabs .nav-link.active {
+    font-size: 18px;
+    color: #35A7FF;
+    font-weight: 500;
+}
+.subscription .nav-tabs .nav-link{
+    font-size: 18px;
+    color: #818181;
+    font-weight: 500;
+}
