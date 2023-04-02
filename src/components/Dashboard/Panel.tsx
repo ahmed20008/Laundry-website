@@ -8,7 +8,7 @@ interface Props {
 }
 
 function Panel() {
-  const [isAdmin, setIsAdmin] = useState<Boolean>(false);
+  const [isAdmin, setIsAdmin] = useState<Boolean>(true);
   const [pageName, setPageName] = useState<String>(() => {
     return isAdmin ? "Admin Dashboard" : "Hi Frederick, Welcome"
   })

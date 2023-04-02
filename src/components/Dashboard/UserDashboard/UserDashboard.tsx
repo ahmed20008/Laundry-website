@@ -28,8 +28,6 @@ const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) 
         return <Subscription />;
       case 3:
         return <Messages />;
-      case 4:
-        return <Logout />;
       default:
         return <MyDashboard />;
     }
@@ -51,11 +49,7 @@ const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) 
     {
       name: "Messages",
       logo: messagesBtn
-    },
-    {
-      name: "Logout",
-      logo: logoutBtn
-    },
+    }
   ]
 
   const onButtonClick = (props: Number) => {

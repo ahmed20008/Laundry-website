@@ -60,10 +60,6 @@ const AdminDashboard: React.FC<AdminDashboardProps> = (props: AdminDashboardProp
     {
       name: "Message",
       logo: messagesBtn
-    },
-    {
-      name: "Logout",
-      logo: logout
     }
   ]
 

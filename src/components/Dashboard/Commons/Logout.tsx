@@ -7,8 +7,12 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Home from '../../Home/Home';
 
-const Logout = () => {
-  const [open, setOpen] = React.useState<boolean>(false);
+interface LogoutProps {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Logout = ({open, setOpen}: LogoutProps) => {
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -20,9 +24,6 @@ const Logout = () => {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen}>
-        Logout
-      </Button>
       <Dialog
         open={open}
         onClose={handleClose}
