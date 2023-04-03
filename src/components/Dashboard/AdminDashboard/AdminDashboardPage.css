@@ -1,0 +1,117 @@
+.admin-dash-btn h4 {
+    font-size: 14px;
+    color: #ACACAC;
+}
+
+.admin-dash-btn h2 {
+    font-size: 28px;
+    color: #333333;
+}
+
+.admin-dash-btn p {
+    color: #292D32;
+    font-size: 12px;
+}
+
+.admin-dash-btn {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.create-order .card {
+    background-color: #35A7FF;
+    border: none;
+    color: #fff;
+}
+
+.create-order .card p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.recent-orders .card{
+    border: 0;
+    box-shadow: 0px 2px rgba(0, 0, 0, 0.08);
+}
+.recent-orders .pick-delivery-date {
+    display: flex;
+}
+
+.recent-orders .order-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-orders .order-top h4 {
+    font-size: 15px;
+    color: rgba(112, 118, 131, 1);
+}
+
+.recent-orders .order-top h4 span {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(50, 60, 71, 1);
+}
+
+.recent-orders .order-top p {
+    font-size: 12px;
+    color: #707683;
+}
+
+.recent-orders .pick-delivery-date p {
+    font-size: 13px;
+    color: #707683;
+}
+
+.recent-orders .pick-delivery-date p span {
+    font-size: 13px;
+    color: #707683;
+    padding-left: 1rem;
+    font-weight: 600;
+}
+
+.recent-orders .pick-delivery-date .delivery-date {
+    padding-left: 2rem;
+}
+
+.recent-orders .order-bottom p {
+    font-size: 13px;
+    color: #707683;
+}
+
+.order-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media screen and (max-width: 767px) {
+    .justify-content-between-sm {
+        display: contents;
+    }
+
+    .recent-orders .pick-delivery-date p span {
+        padding-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .recent-orders .pick-delivery-date {
+        display: contents;
+    }
+
+    .recent-orders .pick-delivery-date .delivery-date {
+        padding-left: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .order-bottom {
+        display: contents;
+    }
+
+    .order-detail-btn {
+        text-align: end;
+        margin-top: 0.5rem;
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import Avatar from './Avatar'
 import { Button } from '@mui/material';
-import { Settings } from '@mui/icons-material';
+import Avatar from './Avatar'
+import Settings from '../Commons/Settings';
 import Logout from "./Logout";
 import { logoutBtn } from '../../../assets';
 

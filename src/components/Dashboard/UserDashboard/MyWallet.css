@@ -1,0 +1,28 @@
+.add-funds h2{
+    color: #646464;
+    font-size: 16px;
+    font-weight: 600;
+}
+.wallet h1{
+    font-size: 50px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.transation-heading h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: #292929;
+}
+.transactions .detail h5{
+    font-size: 14px;
+    color: #3A5255;
+}
+.transactions .detail p{
+    font-size: 10px;
+    color: #737373;
+}
+.transactions .amount {
+    font-size: 15px;
+    font-weight: 500;
+}

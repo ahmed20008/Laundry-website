@@ -51,6 +51,17 @@ import invoice from './Invoice.png';
 import helpCenter from './HelpCenter.png';
 import myWallet from './MyWallet.png';
 import refer from './refer.png';
+import SettingsImg from './Settings-img.png';
+import successLogo from './success-logo.png';
+import newOrders from './new-orders.png';
+import completedOrders from './completed-orders.png';
+import totalOrders from './total-orders.png';
+import orderDetailsLogo from './order-detail.png';
+
+
+
+
+
 export {
     logo,
     twitter,
@@ -105,6 +116,12 @@ export {
     helpCenter,
     myWallet,
     refer,
+    SettingsImg,
+    successLogo,
+    newOrders,
+    completedOrders,
+    totalOrders,
+    orderDetailsLogo,
     
 
 

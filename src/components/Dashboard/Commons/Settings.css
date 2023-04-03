@@ -1,0 +1,30 @@
+.profile-info img{
+    object-fit: cover;
+}
+.profile-info h2{
+    font-size: 22px;
+    color: #464646;
+    font-size: 600;
+    margin-bottom: 0;
+}
+.profile-info p{
+    font-size: 13px;
+    color: #464646;
+}
+.setting-heading{
+    font-size: 22px;
+    font-weight: 600;
+    color: #464646;
+}
+.setting-btn{
+    font-size: 18px;
+    color: #464646;
+}
+.version{
+    font-size: 9.46px;
+    color: #464646;
+}
+.version span{
+    font-size: 11.46px;
+    color: #464646;
+}

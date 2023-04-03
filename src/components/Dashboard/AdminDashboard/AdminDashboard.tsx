@@ -66,11 +66,11 @@ const AdminDashboard: React.FC<AdminDashboardProps> = (props: AdminDashboardProp
   return (
     <>
       <div className="row mt-4">
-        <SideBar onButtonClick={onButtonClick} name={name} email={email} buttons={buttons} isAdmin={isAdmin} />
-        <div className="col-md-8">
-          <div className="bg-white">
-            {renderComponent()}
-          </div>
+        <div className="col-lg-3 col-md-12 px-1">
+          <SideBar onButtonClick={onButtonClick} name={name} email={email} buttons={buttons} isAdmin={isAdmin} />
+        </div>
+        <div className="col-lg-9 col-md-12">
+          {renderComponent()}
         </div>
       </div >
     </>
