@@ -1,0 +1,42 @@
+.costumers-data thead tr th {
+    font-size: 14px;
+    color: #B5B7C0;
+    font-weight: 500;
+}
+
+.costumers-data tbody tr td {
+    color: #292D32;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.costumers-data .active button {
+    color: #008767;
+    background-color: #16C098;
+    border: 1px solid #00B087;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.costumers-data .inactive button {
+    color: #DF0404;
+    background-color: #FFC5C5;
+    border: 1px solid #DF0404;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+
+    tbody,
+    tr {
+        display: block;
+    }
+
+    .px-1-sm {
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }
+}

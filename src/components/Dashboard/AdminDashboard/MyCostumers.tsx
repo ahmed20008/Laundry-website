@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
-import { SearchIcon, activeCostumers, allCoatumers, newCostumers } from '../../../assets';
+import { activeCostumers, allCoatumers, infoCircle, newCostumers } from '../../../assets';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import SortBy from '../Commons/SortBy';
-import Button from '@mui/material/Button';
+import Table from 'react-bootstrap/Table';
 import SmallSearchBar from '../Commons/SmallSearchBar';
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+import './MyCostumers.css';
 
 
 interface CustomersButtons {
@@ -33,10 +36,75 @@ const customersButtons: CustomersButtons[] = [
   },
 ];
 
+interface Customer {
+  name: string;
+  phone: string;
+  email: string;
+  address: string;
+  status: 'active' | 'inactive';
+}
+
+
+const initialCustomers: Customer[] = [
+  {
+    name: 'Frederick Jones',
+    phone: '(225) 555-0118',
+    email: 'Frederick@microsoft.com',
+    address: 'Victoria Island Lagos',
+    status: 'active',
+  },
+  {
+    name: 'Frederick Jones',
+    phone: '(225) 555-0118',
+    email: 'Frederick@microsoft.com',
+    address: 'Victoria Island Lagos',
+    status: 'inactive',
+  },
+  {
+    name: 'Frederick Jones',
+    phone: '(225) 555-0118',
+    email: 'Frederick@microsoft.com',
+    address: 'Victoria Island Lagos',
+    status: 'inactive',
+  },
+  {
+    name: 'John Smith',
+    phone: '(555) 123-4567',
+    email: 'john.smith@example.com',
+    address: '123 Main St',
+    status: 'active',
+  },
+  {
+    name: 'John Smith',
+    phone: '(555) 123-4567',
+    email: 'john.smith@example.com',
+    address: '123 Main St',
+    status: 'active',
+  },
+  {
+    name: 'John Smith',
+    phone: '(555) 123-4567',
+    email: 'john.smith@example.com',
+    address: '123 Main St',
+    status: 'active',
+  }
+];
+
 
 const MyCostumers: React.FC = () => {
 
   const [customerButton, setCustomerButton] = useState(customersButtons);
+
+  const [customers, setCustomers] = useState<Customer[]>(initialCustomers);
+
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 4;
+
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = currentPage * itemsPerPage;
+  const displayedCustomers = customers.slice(startIndex, endIndex);
+
 
   return (
     <>
@@ -81,10 +149,11 @@ const MyCostumers: React.FC = () => {
 
       <div className="row">
         <div className="col-md-12 px-1">
-          <div className="bg-white panel-shadow px-5 py-4" style={{
-            height: '630px',
-            overflowY: 'scroll',
-          }}>
+          <div className="bg-white panel-shadow px-5 py-4"
+            style={{
+              height: '620px',
+              overflowY: 'scroll',
+            }}>
             <div className="justify-content-between-sm">
               <div className="order-heading">
                 <h2>All Customers</h2>
@@ -98,7 +167,50 @@ const MyCostumers: React.FC = () => {
             </div>
 
             <div>
-                text
+              <div className="costumers-data pt-4">
+                <Table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Customer Name</th>
+                      <th scope="col">Phone Number</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Address</th>
+                      <th scope="col">Status</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {displayedCustomers.map((customer, index) => (
+                      <tr key={index}>
+                        <td>{customer.name}</td>
+                        <td>{customer.phone}</td>
+                        <td>{customer.email}</td>
+                        <td>{customer.address}</td>
+                        <td className={customer.status}>
+                          <button>
+                            {customer.status === 'active' ? 'Active' : 'Inactive'}
+                          </button>
+                        </td>
+                        <td>
+                          <button className='border-0 bg-transparent'>
+                            <img src={infoCircle} alt="" />
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </Table>
+                <div className='justify-content-between-sm'>
+                  <p className='pt-4' style={{ color: '#B5B7C0', fontSize: '14px' }}>Showing data 1 to {itemsPerPage}</p>
+                  <Pagination
+                    count={Math.ceil(customers.length / itemsPerPage)}
+                    page={currentPage}
+                    onChange={(event, value) => setCurrentPage(value)}
+                    shape="rounded"
+                    className='pt-4'
+                  />
+                </div>
+              </div>
             </div>
 
           </div>

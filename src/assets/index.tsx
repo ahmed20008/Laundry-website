@@ -60,7 +60,10 @@ import orderDetailsLogo from './order-detail.png';
 import allCoatumers from './all-costumers.png';
 import activeCostumers from './active-costumers.png';
 import newCostumers from './new-costumers.png';
-
+import infoCircle from './info-circle.png';
+import recievedPayment from './recieved-payment.png';
+import operationalExpenses from './operating-expenses.png';
+import balancePayment from './balance-payment.png';
 
 
 export {
@@ -126,7 +129,10 @@ export {
     allCoatumers,
     activeCostumers,
     newCostumers,
-    
+    infoCircle,
+    recievedPayment,
+    operationalExpenses,
+    balancePayment,
 
 
 }
