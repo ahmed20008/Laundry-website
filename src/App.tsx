@@ -8,21 +8,24 @@ import Partners from './components/Partners/Partners';
 import Contact from './components/Contact/Contact';
 import Panel from "./components/Dashboard/Panel";
 import SchedulePickup from './components/SchedulePickup/SchedulePickup';
+import ChangePassword from './components/Dashboard/Commons/ChangePassword';
 
-interface ParentProps {}
+interface ParentProps {
+  isAdmin: boolean;
+};
 
-const App: React.FC<ParentProps> = () => {
+const App: React.FC<ParentProps> = ({ isAdmin }) => {
   return (
     <>
       <Router>
-        <Header />
+        <Header  isAdmin={isAdmin} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/dashboard" element={ <Panel /> } />
-          {/* <Route path='/Schedule-pickup' element={<SchedulePickup />} /> */}
+          <Route path='/change-password' element={<ChangePassword />} />
         </Routes>
         <Footer />
       </Router>

@@ -9,13 +9,16 @@ import { Signup } from './Modals/Signup';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
+interface HeaderProps{
+  isAdmin: boolean;
+}
 
 interface ModalStates {
   LoginmodalShow: boolean;
   SignupmodalShow: boolean;
 }
 
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
 
   const [isSticky, setIsSticky] = useState(false);
 
@@ -92,7 +95,8 @@ const Header: React.FC = () => {
               <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
             </Nav>
             <Nav>
-              <div className='my-auto'>
+              {isAdmin ? (
+                <div className='my-auto'>
                 <Button
                   variant="contained"
                   size="medium"
@@ -105,6 +109,21 @@ const Header: React.FC = () => {
                   schedule a pickup
                 </Button>
               </div>
+              ) : (
+                <div className='my-auto'>
+                <Button
+                  variant="contained"
+                  size="medium"
+                  style={{
+                    background: '#35A7FF',
+                    borderRadius: '10px',
+                    fontSize: '16px',
+                  }}
+                  className="px-5 py-2 nav-btn">
+                  Check in Clothes
+                </Button>
+              </div>
+              ) }
             </Nav>
           </Navbar.Collapse>
         </Container>

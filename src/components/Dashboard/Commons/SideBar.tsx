@@ -3,7 +3,9 @@ import { Button } from '@mui/material';
 import Avatar from './Avatar'
 import Settings from '../Commons/Settings';
 import Logout from "./Logout";
-import { logoutBtn } from '../../../assets';
+import { logoutBtn, settingLogo } from '../../../assets';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+
 
 interface Button {
     name: string;
@@ -18,10 +20,15 @@ interface SideBarProps {
 }
 
 const SideBar: React.FC<SideBarProps> = ({ onButtonClick, name, email, buttons, isAdmin }: SideBarProps) => {
+
     const [open, setOpen] = useState(false);
     const onLogoutPress = () => {
         setOpen(true)
     }
+
+    const [showSettings, setShowSettings] = useState(false);
+
+    
     return (
         <>
             <Logout open={open} setOpen={setOpen} />
@@ -30,100 +37,107 @@ const SideBar: React.FC<SideBarProps> = ({ onButtonClick, name, email, buttons, 
                     boxShadow: '0px 4px 14px 2px rgba(0, 0, 0, 0.1)',
                     borderRadius: '10px',
                 }}>
-                <div>
-                    <Settings />
-                </div>
-                <div>
-                    <Avatar />
-                </div>
-                <div className='pb-3'>
-                    <h2 className='text-center'
-                        style={{
-                            fontWeight: '600',
-                            fontSize: '22px',
-                            color: '#464646',
-                        }}>
-                        {name}
-                    </h2>
-                    <p className='text-center'
-                        style={{
-                            fontSize: '12px',
-                            lineHeight: '31px',
-                            letterSpacing: '0.045em',
-                            color: '#9F9F9F',
-                        }}>
-                        {email}</p>
-                    <div className='text-center pt-3'>
-                        {
-                            !isAdmin ? (
-                                <>
-                                    <Button
-                                        variant="outlined"
-                                        className='me-1'
-                                        style={{
-                                            borderColor: '#35A7FF',
-                                            color: '#35A7FF',
-                                            fontWeight: '600',
-                                            fontSize: '14px',
-                                            borderRadius: '10px',
-                                        }}>
-                                        N4,500
-                                    </Button>
-                                    <Button
-                                        variant="contained"
-                                        className='ms-1 px-5'
-                                        style={{
-                                            background: '#35A7FF',
-                                            fontWeight: '600',
-                                            fontSize: '14px',
-                                            textTransform: 'capitalize',
-                                            borderRadius: '10px'
-                                        }}>
-                                        Top-up
-                                    </Button>
-                                </>
-                            ) : (
-                                <>
-                                    <Button
-                                        variant="contained"
-                                        className='ms-1 px-5'
-                                        style={{
-                                            background: '#35A7FF',
-                                            fontWeight: '600',
-                                            fontSize: '14px',
-                                            textTransform: 'capitalize',
-                                            borderRadius: '10px'
-                                        }}>
-                                        New Admin User
-                                    </Button>
-                                </>
-                            )
-                        }
-                    </div>
-                </div>
-                <hr />
-                <div className='py-3 px-2'>
-                    {
-                        buttons.map((btn, index) => (
-                            <div className='py-2 text-start' key={index}>
+
+                {showSettings ? (<Settings isAdmin={isAdmin} />) : (
+                    <>
+                        <div>
+                            <button className='bg-transparent border-0' onClick={() => setShowSettings(!showSettings)}>
+                                <img src={settingLogo} alt="" />
+                            </button>
+                        </div>
+                        <div>
+                            <Avatar />
+                        </div>
+                        <div className='pb-3'>
+                            <h2 className='text-center'
+                                style={{
+                                    fontWeight: '600',
+                                    fontSize: '22px',
+                                    color: '#464646',
+                                }}>
+                                {name}
+                            </h2>
+                            <p className='text-center'
+                                style={{
+                                    fontSize: '12px',
+                                    lineHeight: '31px',
+                                    letterSpacing: '0.045em',
+                                    color: '#9F9F9F',
+                                }}>
+                                {email}</p>
+                            <div className='text-center pt-3'>
+                                {
+                                    !isAdmin ? (
+                                        <>
+                                            <Button
+                                                variant="outlined"
+                                                className='me-1'
+                                                style={{
+                                                    borderColor: '#35A7FF',
+                                                    color: '#35A7FF',
+                                                    fontWeight: '600',
+                                                    fontSize: '14px',
+                                                    borderRadius: '10px',
+                                                }}>
+                                                N4,500
+                                            </Button>
+                                            <Button
+                                                variant="contained"
+                                                className='ms-1 px-5'
+                                                style={{
+                                                    background: '#35A7FF',
+                                                    fontWeight: '600',
+                                                    fontSize: '14px',
+                                                    textTransform: 'capitalize',
+                                                    borderRadius: '10px'
+                                                }}>
+                                                Top-up
+                                            </Button>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Button
+                                                variant="contained"
+                                                className='ms-1 px-4'
+                                                style={{
+                                                    background: '#35A7FF',
+                                                    fontWeight: '600',
+                                                    fontSize: '14px',
+                                                    borderRadius: '10px'
+                                                }}>
+                                               <AddBoxIcon className='pe-1' /> New Admin User
+                                            </Button>
+                                        </>
+                                    )
+                                }
+                            </div>
+                        </div>
+                        <hr />
+                        <div className='py-3 px-2'>
+                            {
+                                buttons.map((btn, index) => (
+                                    <div className='py-2 text-start' key={index}>
+                                        <Button
+                                            onClick={() => onButtonClick(index)}
+                                            style={{ color: '#818181', fontSize: '15px', fontWeight: '600', textTransform: 'capitalize', }}>
+                                            <img src={btn.logo} className='pe-3' />
+                                            {btn.name}
+                                        </Button>
+                                    </div>
+                                ))}
+                            {/* button for logout */}
+                            <div className='py-2 text-start'>
                                 <Button
-                                    onClick={() => onButtonClick(index)}
+                                    onClick={() => onLogoutPress()}
                                     style={{ color: '#818181', fontSize: '15px', fontWeight: '600', textTransform: 'capitalize', }}>
-                                    <img src={btn.logo} className='pe-3' />
-                                    {btn.name}
+                                    <img src={logoutBtn} className='pe-3' />
+                                    Logout
                                 </Button>
                             </div>
-                        ))}
-                    {/* button for logout */}
-                    <div className='py-2 text-start'>
-                        <Button
-                            onClick={() => onLogoutPress()}
-                            style={{ color: '#818181', fontSize: '15px', fontWeight: '600', textTransform: 'capitalize', }}>
-                            <img src={logoutBtn} className='pe-3' />
-                            Logout
-                        </Button>
-                    </div>
-                </div>
+                        </div>
+                    </>
+                )}
+
             </div>
         </>
     )
