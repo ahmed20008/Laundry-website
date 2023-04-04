@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { SearchIcon, completedOrders, newOrders, orderDetailsLogo, totalOrders } from '../../../assets';
+import { completedOrders, newOrders, orderDetailsLogo, totalOrders } from '../../../assets';
 import AddBoxIcon from '@mui/icons-material/AddBox';
 import Button from '@mui/material/Button';
 import './AdminDashboardPage.css';
 import SortBy from '../Commons/SortBy';
+import SmallSearchBar from '../Commons/SmallSearchBar';
 
 interface Order {
   name: string;
@@ -67,13 +68,6 @@ const AdminDashboardPage: React.FC = () => {
 
   const [ordersDetail, setOrdersDetail] = useState(initialOrders);
 
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-  };
-
-
   return (
     <>
       <div className="row">
@@ -125,25 +119,7 @@ const AdminDashboardPage: React.FC = () => {
                 <h2>Recent Orders</h2>
               </div>
               <div className="justify-content-between-sm">
-                <div className="input-group d-flex align-items-center">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Search"
-                    value={searchTerm}
-                    onChange={handleInputChange}
-                    style={{
-                      backgroundImage: `url(${SearchIcon})`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: '10px center',
-                      paddingLeft: '43px',
-                      backgroundColor: '#e3e3e3',
-                      borderRadius: '10px',
-                      height: '38px',
-                    }}
-                  />
-
-                </div>
+                <SmallSearchBar />
                 <div>
                   <SortBy />
                 </div>

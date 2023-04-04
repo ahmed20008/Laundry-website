@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { SearchIcon } from "../../../assets";
 import SortBy from "../Commons/SortBy";
 import Table from 'react-bootstrap/Table';
+import SmallSearchBar from "../Commons/SmallSearchBar";
 import './MyOrder.css'
-
 
 interface InvoiceData {
     invoiceId: string;
@@ -54,25 +53,7 @@ const MyInvoice = () => {
                         <h2>My Invoice</h2>
                     </div>
                     <div className="justify-content-between-sm">
-                        <div className="input-group d-flex align-items-center">
-                            <input
-                                type="text"
-                                className="form-control"
-                                placeholder="Search"
-                                value={searchTerm}
-                                onChange={handleInputChange}
-                                style={{
-                                    backgroundImage: `url(${SearchIcon})`,
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundPosition: '10px center',
-                                    paddingLeft: '43px',
-                                    backgroundColor: '#e3e3e3',
-                                    borderRadius: '10px',
-                                    height: '38px',
-                                }}
-                            />
-
-                        </div>
+                        <SmallSearchBar />
                         <div>
                             <SortBy />
                         </div>

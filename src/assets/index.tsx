@@ -57,8 +57,9 @@ import newOrders from './new-orders.png';
 import completedOrders from './completed-orders.png';
 import totalOrders from './total-orders.png';
 import orderDetailsLogo from './order-detail.png';
-
-
+import allCoatumers from './all-costumers.png';
+import activeCostumers from './active-costumers.png';
+import newCostumers from './new-costumers.png';
 
 
 
@@ -122,6 +123,9 @@ export {
     completedOrders,
     totalOrders,
     orderDetailsLogo,
+    allCoatumers,
+    activeCostumers,
+    newCostumers,
     
 
 
