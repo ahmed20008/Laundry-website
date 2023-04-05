@@ -9,7 +9,7 @@ import { Signup } from './Modals/Signup';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-interface HeaderProps{
+interface HeaderProps {
   isAdmin: boolean;
 }
 
@@ -53,20 +53,31 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                     <p>+234 (123) 456 7890</p>
                   </a>
                 </div>
-                <div className="contact pe-2 my-auto">
-                  <img src={LoginLogo} width="20px" />
-                  <button onClick={() => setLoginModalShow(true)} className='text-white'>
-                    Login
-                  </button>
-                </div>
-                <Login show={LoginmodalShow} onHide={() => setLoginModalShow(false)} />
-                <div className="contact pe-4 my-auto">
-                  <img src={SignupLogo} width="20px" />
-                  <button onClick={() => setSignupModalShow(true)} className='text-white'>
-                    Sign up
-                  </button>
-                  <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
-                </div>
+                {isAdmin ? (
+                  <>
+                    <div className="contact pe-2 my-auto">
+                      <img src={LoginLogo} width="20px" />
+                      <button onClick={() => setLoginModalShow(true)} className='text-white'>
+                        Login
+                      </button>
+                    </div>
+                    <Login show={LoginmodalShow} onHide={() => setLoginModalShow(false)} />
+                    <div className="contact pe-4 my-auto">
+                      <img src={SignupLogo} width="20px" />
+                      <button onClick={() => setSignupModalShow(true)} className='text-white'>
+                        Sign up
+                      </button>
+                      <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
+                    </div>
+                  </>
+                ) : (
+                  <div className="contact pe-2 my-auto">
+                    <img src={LoginLogo} width="20px" />
+                    <button onClick={() => setLoginModalShow(true)} className='text-white'>
+                      Admin
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -95,35 +106,35 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
               <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
             </Nav>
             <Nav>
-              {isAdmin ? (
+              {!isAdmin ? (
                 <div className='my-auto'>
-                <Button
-                  variant="contained"
-                  size="medium"
-                  style={{
-                    background: '#35A7FF',
-                    borderRadius: '10px',
-                    fontSize: '16px',
-                  }}
-                  className="px-5 py-2 nav-btn">
-                  schedule a pickup
-                </Button>
-              </div>
+                  <Button
+                    variant="contained"
+                    size="medium"
+                    style={{
+                      background: '#35A7FF',
+                      borderRadius: '10px',
+                      fontSize: '16px',
+                    }}
+                    className="px-5 py-2 nav-btn">
+                    schedule a pickup
+                  </Button>
+                </div>
               ) : (
                 <div className='my-auto'>
-                <Button
-                  variant="contained"
-                  size="medium"
-                  style={{
-                    background: '#35A7FF',
-                    borderRadius: '10px',
-                    fontSize: '16px',
-                  }}
-                  className="px-5 py-2 nav-btn">
-                  Check in Clothes
-                </Button>
-              </div>
-              ) }
+                  <Button
+                    variant="contained"
+                    size="medium"
+                    style={{
+                      background: '#35A7FF',
+                      borderRadius: '10px',
+                      fontSize: '16px',
+                    }}
+                    className="px-5 py-2 nav-btn">
+                    Check in Clothes
+                  </Button>
+                </div>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

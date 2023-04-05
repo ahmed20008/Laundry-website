@@ -101,17 +101,6 @@ const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuS
                             <li>Door Delivery</li>
                           </ul>
                         </div>
-                        {/* <div className="text-center">
-                          <button className='btn' style={{
-                            background: '#35A7FF',
-                            borderRadius: '3px',
-                            fontSize: '16px',
-                            color: '#fff',
-                            fontWeight: '500',
-                          }}>
-                            SUBSCRIBE
-                          </button>
-                        </div> */}
                       </div>
                     </div>
                   </div>

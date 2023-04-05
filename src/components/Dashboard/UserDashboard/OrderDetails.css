@@ -1,0 +1,12 @@
+.order-details p{
+    padding: 30px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #B5B7C0;
+}
+.order-details p span{
+    font-size: 14px;
+    color: #292D32;
+    font-weight: 500;
+    padding-left: 2.5rem;
+}

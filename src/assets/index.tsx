@@ -64,6 +64,9 @@ import infoCircle from './info-circle.png';
 import recievedPayment from './recieved-payment.png';
 import operationalExpenses from './operating-expenses.png';
 import balancePayment from './balance-payment.png';
+import pickedUp from './picked-up.png';
+import processing from './processing.png';
+import deliveredOrder from './delivered-order.png';
 
 
 export {
@@ -133,6 +136,9 @@ export {
     recievedPayment,
     operationalExpenses,
     balancePayment,
-
+    pickedUp,
+    processing,
+    deliveredOrder,
+    
 
 }
