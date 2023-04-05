@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import './AdminDashboardPage.css';
 import SortBy from '../Commons/SortBy';
 import SmallSearchBar from '../Commons/SmallSearchBar';
+import AdminOrderDetail from '../Commons/AdminOrderDetail';
 
 interface Order {
   name: string;
@@ -68,95 +69,112 @@ const AdminDashboardPage: React.FC = () => {
 
   const [ordersDetail, setOrdersDetail] = useState(initialOrders);
 
+  const [adminOrderDetailClicked, setAdminOrderDetailClicked] = useState(false);
+
+  const handleAdminOrderDetail = () => {
+    setAdminOrderDetailClicked(true);
+  };
+
   return (
     <>
-      <div className="row">
-        <div className="col-lg-9 col-md-12 px-1">
-          <div className="bg-white mb-3 panel-shadow">
-            <div className="admin-dash-btn px-4 py-1">
-              {orders.map((order, index) => (
-                <div className='my-auto mx-auto' key={index}>
-                  <button className='border-0 bg-transparent p-0'>
-                    <div className='m-3 d-flex'>
-                      <div className='my-auto'>
-                        <img src={order.image} className='img-fluid' />
-                      </div>
-                      <div className='text-start ps-3'>
-                        <h4 className='mb-0'>{order.name}</h4>
-                        <h2 className='mb-0'>{order.count}</h2>
-                        <p>This Month</p>
-                      </div>
+      {adminOrderDetailClicked ? (
+        <AdminOrderDetail />
+      ) : (
+        <>
+          <div className="row">
+            <div className="col-lg-9 col-md-12 px-1">
+              <div className="bg-white mb-3 panel-shadow">
+                <div className="admin-dash-btn px-4 py-1">
+                  {orders.map((order, index) => (
+                    <div className='my-auto mx-auto' key={index}>
+                      <button className='border-0 bg-transparent p-0'>
+                        <div className='m-3 d-flex'>
+                          <div className='my-auto'>
+                            <img src={order.image} className='img-fluid' />
+                          </div>
+                          <div className='text-start ps-3'>
+                            <h4 className='mb-0'>{order.name}</h4>
+                            <h2 className='mb-0'>{order.count}</h2>
+                            <p>This Month</p>
+                          </div>
+                        </div>
+                      </button>
                     </div>
-                  </button>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="col-lg-3 col-md-12 px-1">
-          <div className="create-order panel-shadow">
-            <button className='border-0 bg-transparent w-100'>
-              <div className="card d-flex justify-content-center align-items-center" style={{ height: '127px', border: '10px' }}>
-                <div>
-                  <div className='text-center'>
-                    <AddBoxIcon fontSize="large" />
+            <div className="col-lg-3 col-md-12 px-1">
+              <div className="create-order panel-shadow">
+                <button className='border-0 bg-transparent w-100'>
+                  <div className="card d-flex justify-content-center align-items-center" style={{ height: '127px', border: '10px' }}>
+                    <div>
+                      <div className='text-center'>
+                        <AddBoxIcon fontSize="large" />
+                      </div>
+                      <p>Create new order</p>
+                    </div>
                   </div>
-                  <p>Create new order</p>
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-12 px-1">
-          <div className="bg-white panel-shadow px-5 py-4" style={{
-            height: '630px',
-            overflowY: 'scroll',
-          }}>
-            <div className="justify-content-between-sm">
-              <div className="order-heading">
-                <h2>Recent Orders</h2>
-              </div>
-              <div className="justify-content-between-sm">
-                <SmallSearchBar />
-                <div>
-                  <SortBy />
-                </div>
+                </button>
               </div>
             </div>
-
-            <div>
-              {ordersDetail.map((orderDetail) => (
-                <div key={orderDetail.id} className='recent-orders py-2'>
-                  <div className="card px-3 py-3">
-                    <div className="order-top">
-                      <h4>Order ID: <span>{orderDetail.id}</span></h4>
-                      <p className='time'>9:08AM</p>
-                    </div>
-                    <div className="pick-delivery-date py-2">
-                      <p>Pickup date: <span>{orderDetail.pickupDate}</span></p>
-                      <p className='delivery-date'>Delivery date: <span>{orderDetail.deliveryDate}</span></p>
-                    </div>
-                    <div className="order-bottom">
-                      <div className='d-flex align-items-center'>
-                        <div><img src={orderDetail.image} className='img-fluid pe-3' alt="" /></div>
-                        <div><p>{orderDetail.name} </p></div>
-                      </div>
-                      <div className='order-detail-btn'>
-                        <Button variant='contained' style={{ backgroundColor: '#35A7FF', borderRadius: '10px' }}>
-                          Order Details
-                        </Button>
-                      </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12 px-1">
+              <div className="bg-white panel-shadow px-5 py-4" style={{
+                height: '630px',
+                overflowY: 'scroll',
+              }}>
+                <div className="justify-content-between-sm">
+                  <div className="order-heading">
+                    <h2>Recent Orders</h2>
+                  </div>
+                  <div className="justify-content-between-sm">
+                    <SmallSearchBar />
+                    <div>
+                      <SortBy />
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
 
+                <div>
+                  {ordersDetail.map((orderDetail) => (
+                    <div key={orderDetail.id} className='recent-orders py-2'>
+                      <div className="card px-3 py-3">
+                        <div className="order-top">
+                          <h4>Order ID: <span>{orderDetail.id}</span></h4>
+                          <p className='time'>9:08AM</p>
+                        </div>
+                        <div className="pick-delivery-date py-2">
+                          <p>Pickup date: <span>{orderDetail.pickupDate}</span></p>
+                          <p className='delivery-date'>Delivery date: <span>{orderDetail.deliveryDate}</span></p>
+                        </div>
+                        <div className="order-bottom">
+                          <div className='d-flex align-items-center'>
+                            <div><img src={orderDetail.image} className='img-fluid pe-3' alt="" /></div>
+                            <div><p>{orderDetail.name} </p></div>
+                          </div>
+                          <div className='order-detail-btn'>
+                            <Button variant='contained'
+                              style={{ backgroundColor: '#35A7FF', borderRadius: '10px' }}
+                              onClick={() => {
+                                handleAdminOrderDetail();
+                              }}
+                            >
+                              Order Details
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
+
     </>
   )
 }

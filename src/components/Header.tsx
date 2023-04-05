@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                     <p>+234 (123) 456 7890</p>
                   </a>
                 </div>
-                {isAdmin ? (
+                {!isAdmin ? (
                   <>
                     <div className="contact pe-2 my-auto">
                       <img src={LoginLogo} width="20px" />
@@ -71,9 +71,9 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                     </div>
                   </>
                 ) : (
-                  <div className="contact pe-2 my-auto">
+                  <div className="contact pe-4 my-auto">
                     <img src={LoginLogo} width="20px" />
-                    <button onClick={() => setLoginModalShow(true)} className='text-white'>
+                    <button>
                       Admin
                     </button>
                   </div>
