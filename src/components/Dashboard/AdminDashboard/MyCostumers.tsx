@@ -5,34 +5,30 @@ import SortBy from '../Commons/SortBy';
 import Table from 'react-bootstrap/Table';
 import SmallSearchBar from '../Commons/SmallSearchBar';
 import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
 import './MyCostumers.css';
+import { Form } from 'react-bootstrap';
 
 
 interface CustomersButtons {
   image: string;
   title: string;
   value: number;
-  subtitle: string;
 }
 const customersButtons: CustomersButtons[] = [
   {
     image: allCoatumers,
     title: "All Costumers",
     value: 124,
-    subtitle: "This Month",
   },
   {
     image: activeCostumers,
     title: "Active Costumers",
     value: 35,
-    subtitle: "This Month",
   },
   {
     image: newCostumers,
     title: "New Costumers",
     value: 189,
-    subtitle: "This Month",
   },
 ];
 
@@ -111,21 +107,25 @@ const MyCostumers: React.FC = () => {
       <div className="row">
         <div className="col-lg-9 col-md-12 px-1">
           <div className="bg-white mb-3 panel-shadow">
-            <div className="admin-dash-btn px-4 py-1">
+            <div className="admin-dash-btn py-1">
               {customerButton.map((customerButton, index) => (
                 <div key={index} className="my-auto mx-auto">
-                  <button className="border-0 bg-transparent p-0">
-                    <div className="m-3 d-flex">
-                      <div className="my-auto">
-                        <img src={customerButton.image} className="img-fluid" />
-                      </div>
-                      <div className="text-start ps-3">
-                        <h4 className="mb-0">{customerButton.title}</h4>
-                        <h2 className="mb-0">{customerButton.value}</h2>
-                        <p>{customerButton.subtitle}</p>
+                  <div className="m-3 d-flex">
+                    <div className="my-auto">
+                      <img src={customerButton.image} className="img-fluid" />
+                    </div>
+                    <div className="text-start ps-3">
+                      <h4 className="mb-0">{customerButton.title}</h4>
+                      <h2 className="mb-0">{customerButton.value}</h2>
+                      <div className='duration-dropdown'>
+                        <Form.Select>
+                          <option>This Month</option>
+                          <option>This week</option>
+                          <option>Today</option>
+                        </Form.Select>
                       </div>
                     </div>
-                  </button>
+                  </div>
                 </div>
               ))}
             </div>

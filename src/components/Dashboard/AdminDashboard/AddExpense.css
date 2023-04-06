@@ -1,0 +1,19 @@
+.expense-form .form-control{
+    background-color: #fff;
+    border: 1px solid #4A5B5D4D;
+}
+.expense-form h1{
+    font-weight: 600;
+    font-size: 26px;
+    color: #818181;
+}
+.expense-table thead tr th{
+    font-weight: 500;
+    font-size: 14px;
+    color: #B5B7C0;
+}
+.expense-table tbody tr td{
+    font-weight: 500;
+    font-size: 14px;
+    color: #292D32;
+}

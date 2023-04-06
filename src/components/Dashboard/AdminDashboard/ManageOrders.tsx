@@ -6,6 +6,7 @@ import './AdminDashboardPage.css';
 import SortBy from '../Commons/SortBy';
 import SmallSearchBar from '../Commons/SmallSearchBar';
 import AdminOrderDetail from '../Commons/AdminOrderDetail';
+import { Form } from 'react-bootstrap';
 
 interface ManageOrder {
   name: string;
@@ -83,21 +84,25 @@ const ManageOrders: React.FC = () => {
           <div className="row">
             <div className="col-lg-9 col-md-12 px-1">
               <div className="bg-white mb-3 panel-shadow">
-                <div className="admin-dash-btn px-4 py-1">
+                <div className="admin-dash-btn py-1">
                   {Manageorders.map((order, index) => (
                     <div className='my-auto mx-auto' key={index}>
-                      <button className='border-0 bg-transparent p-0'>
-                        <div className='m-3 d-flex'>
-                          <div className='my-auto'>
-                            <img src={order.image} className='img-fluid' />
-                          </div>
-                          <div className='text-start ps-3'>
-                            <h4 className='mb-0'>{order.name}</h4>
-                            <h2 className='mb-0'>{order.count}</h2>
-                            <p>This Month</p>
+                      <div className='m-3 d-flex'>
+                        <div className='my-auto'>
+                          <img src={order.image} className='img-fluid' />
+                        </div>
+                        <div className='text-start ps-3'>
+                          <h4 className='mb-0'>{order.name}</h4>
+                          <h2 className='mb-0'>{order.count}</h2>
+                          <div className='duration-dropdown'>
+                            <Form.Select>
+                              <option>This Month</option>
+                              <option>This week</option>
+                              <option>Today</option>
+                            </Form.Select>
                           </div>
                         </div>
-                      </button>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -155,11 +160,11 @@ const ManageOrders: React.FC = () => {
                           </div>
                           <div className='order-detail-btn'>
                             <Button variant='contained'
-                             style={{ backgroundColor: '#35A7FF', borderRadius: '10px' }}
-                             onClick={() => {
-                              handleAdminOrderDetail();
-                             }}
-                             >
+                              style={{ backgroundColor: '#35A7FF', borderRadius: '10px' }}
+                              onClick={() => {
+                                handleAdminOrderDetail();
+                              }}
+                            >
                               Order Details
                             </Button>
                           </div>

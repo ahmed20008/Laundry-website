@@ -17,6 +17,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+.admin-dash-btn .duration-dropdown .form-select{
+    border: 0;
+    font-size: 12px;
+    padding: 0 1.9rem 0 0;
+}
 
 .create-order .card {
     background-color: #35A7FF;
@@ -93,6 +98,11 @@
     .recent-orders .pick-delivery-date p span {
         padding-left: 0 !important;
     }
+    .admin-dash-btn {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -113,5 +123,10 @@
     .order-detail-btn {
         text-align: end;
         margin-top: 0.5rem;
+    }
+    .admin-dash-btn {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 1rem;
     }
 }

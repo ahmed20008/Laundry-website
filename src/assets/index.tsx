@@ -67,6 +67,8 @@ import balancePayment from './balance-payment.png';
 import pickedUp from './picked-up.png';
 import processing from './processing.png';
 import deliveredOrder from './delivered-order.png';
+import editExpenseLogo from './edit-expense.png';
+import deleteExpenseLogo from './delete-expense.png';
 
 
 export {
@@ -139,6 +141,7 @@ export {
     pickedUp,
     processing,
     deliveredOrder,
-    
+    editExpenseLogo,
+    deleteExpenseLogo,
 
 }

@@ -11,10 +11,15 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
+.costumers-data tbody tr td .email{
+    font-size: 10px;
+    font-weight: 400;
+    color: #818181;
+}
 
 .costumers-data .active button {
     color: #008767;
-    background-color: #16C098;
+    background-color: #76f8da;
     border: 1px solid #00B087;
     border-radius: 4px;
     font-size: 14px;

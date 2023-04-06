@@ -54,14 +54,14 @@ const Footer: React.FC = () => {
                                 <div className='footer-bar mt-3 mb-4'></div>
                                 <div className='footer-contact'>
                                     <p className='pt-2 phone'>
-                                        <img src={call} className='pe-3' /><a href="#">+234 (567) 8901</a>
+                                        <img src={call} className='pe-3' /><a href="tel: +234 (567) 8901">+234 (567) 8901</a>
                                     </p>
                                     <p className='pt-4 address'>
                                         <img src={map} className='pe-3' />
                                         3401 Adeoluwa Tunde Street off Mega Filling Station Victoria Island Lagos, Nigeria
                                     </p>
                                     <p className='pt-4 mail'>
-                                        <img src={mail} className='pe-3' /><a href="#">info@laundry24.com</a>
+                                        <img src={mail} className='pe-3' /><a href="mailto: info@laundry24.com">info@laundry24.com</a>
                                     </p>
                                 </div>
                             </div>
