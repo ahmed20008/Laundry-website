@@ -3,37 +3,25 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+import { Form } from 'react-bootstrap';
 
 const SortBy = () => {
-    const [Sort, setSort] = React.useState('');
-
-    const handleChange = (event: SelectChangeEvent) => {
-        setSort(event.target.value);
-    };
 
     return (
-        <FormControl sx={{ m: 1, minWidth: 100 }} style={{backgroundColor: '#e3e3e3'}}  size="small">
-            <InputLabel
-                style={{
-                    fontSize: '14px',
-                    color: 'rgba(126, 126, 126, 1)',
-                }}>
-                Sort by
-            </InputLabel>
-            <Select
-                labelId="demo-select-small"
-                id="demo-select-small"
-                value={Sort}
-                label="Age"
-                onChange={handleChange}
-            >
-                <MenuItem value="">
-                    <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Paid</MenuItem>
-                <MenuItem value={20}>Unpaid</MenuItem>
-            </Select>
-        </FormControl>
+        <>
+            <Form.Select size="sm" className='ms-3' style={{
+                backgroundColor: '#F8F8F8',
+                border: 'none',
+                fontSize: '12px',
+                paddingTop: '0.6rem',
+                paddingBottom: '0.6rem',
+                fontWeight: '500',
+                borderRadius: '10px',
+            }}>
+                <option value="Paid">Paid</option>
+                <option value="Unpaid">Unpaid</option>
+            </Form.Select>
+        </>
     );
 }
 export default SortBy;

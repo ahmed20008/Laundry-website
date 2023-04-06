@@ -23,9 +23,10 @@ const SmallSearchBar: React.FC = () => {
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: '10px center',
                     paddingLeft: '43px',
-                    backgroundColor: '#e3e3e3',
+                    backgroundColor: '#F8F8F8',
                     borderRadius: '10px',
                     height: '38px',
+                    border: 'none',
                 }}
             />
 
