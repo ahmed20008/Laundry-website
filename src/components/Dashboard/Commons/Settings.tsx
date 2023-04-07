@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { SettingsImg } from '../../../assets'
 import Grid from '@mui/material/Grid';
 import ClearIcon from '@mui/icons-material/Clear';
@@ -6,21 +6,29 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
 import './Settings.css';
+import Logout from './Logout';
 
 interface SettingProps {
-    isAdmin: Boolean
+    isAdmin: Boolean;
 };
 
 
 const Settings: React.FC<SettingProps> = ({ isAdmin }) => {
+    
     const navigate = useNavigate();
-    function handleButtonClick() {
+    function handleButtonClick(): void {
         navigate('/change-password');
+    }
+
+    const [open, setOpen] = useState(false);
+    const onLogoutPress = () => {
+        setOpen(true)
     }
 
     return (
         <>
             <div>
+                <Logout open={open} setOpen={setOpen} />
                 <div className="close pb-4">
                     <div className="d-flex justify-content-between">
                         <div className='setting-heading py-2'>
@@ -75,7 +83,9 @@ const Settings: React.FC<SettingProps> = ({ isAdmin }) => {
                         </div>
                     </div>
                     <div className='d-flex justify-content-between align-items-center py-4'>
-                        <button className='bg-transparent border-0 setting-btn'>
+                        <button className='bg-transparent border-0 setting-btn'
+                            onClick={() => onLogoutPress()}
+                        >
                             Log out
                         </button>
                         <div>

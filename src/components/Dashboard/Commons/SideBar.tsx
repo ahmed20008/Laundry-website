@@ -28,7 +28,7 @@ const SideBar: React.FC<SideBarProps> = ({ onButtonClick, name, email, buttons, 
 
     const [showSettings, setShowSettings] = useState(false);
 
-    
+
     return (
         <>
             <Logout open={open} setOpen={setOpen} />
@@ -103,9 +103,9 @@ const SideBar: React.FC<SideBarProps> = ({ onButtonClick, name, email, buttons, 
                                                     background: '#35A7FF',
                                                     fontWeight: '600',
                                                     fontSize: '14px',
-                                                    borderRadius: '10px'
+                                                    borderRadius: '10px',
                                                 }}>
-                                               <AddBoxIcon className='pe-1' /> New Admin User
+                                                <AddBoxIcon className='pe-1' /> New Admin User
                                             </Button>
                                         </>
                                     )
@@ -119,7 +119,7 @@ const SideBar: React.FC<SideBarProps> = ({ onButtonClick, name, email, buttons, 
                                     <div className='py-2 text-start' key={index}>
                                         <Button
                                             onClick={() => onButtonClick(index)}
-                                            style={{ color: '#818181', fontSize: '15px', fontWeight: '600', textTransform: 'capitalize', }}>
+                                            style={{ color: '#818181', fontSize: '15px', fontWeight: '600', textTransform: 'capitalize', textAlign: 'left', }}>
                                             <img src={btn.logo} className='pe-3' />
                                             {btn.name}
                                         </Button>

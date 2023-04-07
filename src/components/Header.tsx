@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import { logo, SignupLogo, LoginLogo } from '../assets';
 import { Login } from './Modals/Login';
 import { Signup } from './Modals/Signup';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 interface HeaderProps {
@@ -41,6 +41,13 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
   const [LoginmodalShow, setLoginModalShow] = useState<boolean>(false);
   const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
 
+  const navigate = useNavigate();
+  function handleSchedulePickup(): void {
+    navigate('/schedule-pickup');
+  }
+  function handleCheckInClothes(): void {
+    navigate('/check-in');
+  }
   return (
     <div className={isSticky ? 'sticky-nav' : ''}>
       <div className='rectengle-2 w-full'>
@@ -116,7 +123,9 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                       borderRadius: '10px',
                       fontSize: '16px',
                     }}
-                    className="px-5 py-2 nav-btn">
+                    className="px-5 py-2 nav-btn"
+                    onClick={handleSchedulePickup}
+                  >
                     schedule a pickup
                   </Button>
                 </div>
@@ -130,7 +139,9 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                       borderRadius: '10px',
                       fontSize: '16px',
                     }}
-                    className="px-5 py-2 nav-btn">
+                    className="px-5 py-2 nav-btn"
+                    onClick={handleCheckInClothes}
+                    >
                     Check in Clothes
                   </Button>
                 </div>
