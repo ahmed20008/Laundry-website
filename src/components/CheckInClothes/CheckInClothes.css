@@ -1,0 +1,25 @@
+.checkin-clothes p {
+    font-size: 14px;
+    color: #9F9F9F;
+}
+
+.checkin-clothes p span button {
+    color: #35A7FF;
+    text-decoration: underline;
+}
+
+.check-in-review h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #464646;
+}
+
+.total-invoice p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.total-invoice .total-amount p {
+    font-size: 20px;
+    font-weight: 700;
+}

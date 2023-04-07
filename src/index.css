@@ -37,4 +37,8 @@ p {
     .sm-w-100{
         width: 100%!important;
     }
+    .px-5{
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
 }

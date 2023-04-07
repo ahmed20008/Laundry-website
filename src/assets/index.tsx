@@ -69,7 +69,10 @@ import processing from './processing.png';
 import deliveredOrder from './delivered-order.png';
 import editExpenseLogo from './edit-expense.png';
 import deleteExpenseLogo from './delete-expense.png';
-
+import SchedulePickupImg from './Schedule-pickup.png';
+import ConfirmAddressImg from './Confirm-Address.png';
+import checkInClothes from './checkin-clothes.png';
+import checkInReview from './check-in-review.png';
 
 export {
     logo,
@@ -143,5 +146,8 @@ export {
     deliveredOrder,
     editExpenseLogo,
     deleteExpenseLogo,
-
+    SchedulePickupImg,
+    ConfirmAddressImg,
+    checkInClothes,
+    checkInReview,
 }
