@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
               <Nav.Link as={Link} to="/contact" className='ps-5 nav-pages'>Contact us</Nav.Link>
             </Nav>
             <Nav>
-              {isAdmin ? (
+              {!isAdmin ? (
                 <div className='my-auto'>
                   <Button
                     variant="contained"
