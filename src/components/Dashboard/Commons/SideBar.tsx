@@ -32,7 +32,7 @@ const SideBar: React.FC<SideBarProps> = ({ onButtonClick, name, email, buttons, 
     return (
         <>
             <Logout open={open} setOpen={setOpen} />
-            <div className='bg-white p-3'
+            <div className='bg-white p-3 mb-sm-1'
                 style={{
                     boxShadow: '0px 4px 14px 2px rgba(0, 0, 0, 0.1)',
                     borderRadius: '10px',

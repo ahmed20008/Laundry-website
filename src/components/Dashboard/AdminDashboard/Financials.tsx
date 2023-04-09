@@ -165,7 +165,7 @@ const Financials: React.FC = () => {
             </div>
             <div className="row">
               <div className="col-md-12">
-                <div className="bg-white panel-shadow px-5 py-4" style={{
+                <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{
                   height: '620px',
                   overflowY: 'scroll',
                 }}>

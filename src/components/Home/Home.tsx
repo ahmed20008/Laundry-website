@@ -340,13 +340,15 @@ const Home: React.FC = () => {
                         <div className="col-md-6 my-auto">
                             <div className="partner-us-form">
                                 <Form>
-                                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <div className='d-flex'>
+                                    <div className='d-flex d-contents-sm'>
+                                        <Form.Group className="mb-3 w-75">
                                             <Form.Control type="email" placeholder="Your e-mail address" />
+                                        </Form.Group>
+                                        <div>
                                             <Button
                                                 variant="contained"
                                                 type='submit'
-                                                size="large"
+                                                className='mt-sm-1'
                                                 style={{
                                                     background: '#35A7FF',
                                                     padding: '10px 40px',
@@ -356,13 +358,13 @@ const Home: React.FC = () => {
                                                 SUBSCRIBE
                                             </Button>
                                         </div>
-                                    </Form.Group>
+                                    </div>
                                 </Form>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
         </>
     );
 };

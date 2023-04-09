@@ -113,4 +113,11 @@
         font-size: 18px;
         line-height: 30px;
     }
+    .partners-heading h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .partners-form input::placeholder, .partners-form textarea::placeholder {
+        padding-left: 0.5rem;
+    }
 }

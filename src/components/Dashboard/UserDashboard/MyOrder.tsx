@@ -52,7 +52,7 @@ const MyOrder = () => {
         <>
             {orderDetailClicked ? (<OrderDetails />) : (
                 <>
-                    <div className="bg-white panel-shadow px-5 py-4" style={{
+                    <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{
                         height: '700px',
                         overflowY: 'scroll',
                     }}>

@@ -13,7 +13,7 @@ const ProfileUpdated: React.FC = () => {
     return (
         <>
             <div>
-                <div className="bg-white panel-shadow px-5 py-4"
+                <div className="bg-white panel-shadow px-5 py-4 mt-md-1" 
                     style={{
                         height: '700px',
                         overflowY: 'scroll',

@@ -39,7 +39,7 @@ const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuS
               }
             </div>
           </div>
-          <div className="bg-white panel-shadow">
+          <div className="bg-white panel-shadow mt-md-1">
             <div className="packages px-4 pt-4">
               <h2 className='pb-3'>Subscriptions and Packages</h2>
               <div className="row">
@@ -157,7 +157,7 @@ const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuS
           </div>
         </div>
         <div className="col-lg-4 col-md-12 px-1">
-          <div className="panel-shadow">
+          <div className="panel-shadow mt-md-1">
             <div className="redeem">
               <div className="card px-4 py-2">
                 <h2>My Points</h2>

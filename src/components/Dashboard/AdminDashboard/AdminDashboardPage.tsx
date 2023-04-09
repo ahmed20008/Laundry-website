@@ -126,7 +126,7 @@ const AdminDashboardPage: React.FC = () => {
           </div>
           <div className="row">
             <div className="col-md-12 px-1">
-              <div className="bg-white panel-shadow px-5 py-4" style={{
+              <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{
                 height: '630px',
                 overflowY: 'scroll',
               }}>

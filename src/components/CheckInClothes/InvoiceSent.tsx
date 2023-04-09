@@ -67,7 +67,7 @@ const InvoiceSent: React.FC = () => {
           </div>
           <div className="col-lg-9 col-md-12">
             <div>
-              <div className="bg-white panel-shadow px-5 py-4"
+              <div className="bg-white panel-shadow px-5 py-4 mt-md-1"
                 style={{
                   height: '700px',
                   overflowY: 'scroll',

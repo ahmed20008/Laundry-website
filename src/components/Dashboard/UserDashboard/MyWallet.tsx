@@ -55,7 +55,7 @@ const MyWallet = () => {
                     <>
                         <div className="row">
                             <div className="col-lg-8 col-md-12 px-1">
-                                <div className="bg-white mb-2 panel-shadow px-4 py-5" style={{
+                                <div className="bg-white mb-2 panel-shadow px-4 py-5 mt-md-1" style={{
                                     height: '700px',
                                     overflowY: 'scroll',
                                 }}>

@@ -57,7 +57,7 @@ const Services: React.FC = () => {
                   </div>
                   <div className="col-md-6 my-auto">
                     <div className="services-img">
-                      <img src={ourServices} className="img-fluid" alt="" />
+                      <img src={ourServices} className="img-fluid pt-sm-1" alt="" />
                     </div>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const Services: React.FC = () => {
                 </div>
                 <div className="col-md-6 my-auto">
                   <div className="services-img">
-                    <img src={ourDelivery} className="img-fluid" alt="" />
+                    <img src={ourDelivery} className="img-fluid pt-sm-1" alt="" />
                   </div>
                 </div>
               </div>

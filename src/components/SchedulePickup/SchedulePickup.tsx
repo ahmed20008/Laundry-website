@@ -102,7 +102,7 @@ const SchedulePickup: React.FC = () => {
                   </div>
                 </div>
                 <div className="col-lg-9 col-md-12">
-                  <div className="bg-white panel-shadow px-5 py-4" style={{
+                  <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{
                     height: '700px',
                     overflowY: 'scroll',
                   }}>

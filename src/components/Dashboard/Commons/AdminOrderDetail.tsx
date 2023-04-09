@@ -3,7 +3,7 @@ import React from 'react'
 const AdminOrderDetail: React.FC = () => {
   return (
     <>
-      <div className="bg-white panel-shadow px-5 py-4" style={{
+      <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{
         height: '760px',
         overflowY: 'scroll',
       }}>

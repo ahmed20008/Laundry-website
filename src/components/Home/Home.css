@@ -308,7 +308,6 @@
 
 .partner-us-form input {
     box-sizing: border-box;
-    width: 446px;
     height: 52px;
     background: linear-gradient(180deg, rgba(53, 167, 255, 0) 0%, rgba(53, 213, 229, 0) 67.77%, rgba(53, 255, 207, 0) 100%);
     border: 2px solid #9F9F9F;
@@ -524,5 +523,14 @@
     .partners-heading h1 {
         font-size: 40px;
         line-height: 50px;
+    }
+    .partner-us-form input::placeholder {
+        padding-left: 0.5rem;
+    }
+    .d-contents-sm{
+        display: contents !important;
+    }
+    .mt-sm-1{
+        margin-top: 1rem !important;
     }
 }

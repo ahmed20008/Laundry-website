@@ -37,7 +37,7 @@ const Dashboard: React.FC<DashboardProps> = (props: DashboardProps) => {
               <Notification />
             </div>
 
-            <div className='d-flex justify-content-between'>
+            <div className='justify-content-between-sm'>
               <h1 style={{
                 fontWeight: '700',
                 fontSize: '35px',

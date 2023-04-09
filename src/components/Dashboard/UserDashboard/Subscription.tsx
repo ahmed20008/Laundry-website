@@ -34,7 +34,7 @@ const Subscription = () => {
   return (
     <>
       <div
-        className="bg-white panel-shadow px-5 py-4"
+        className="bg-white panel-shadow px-5 py-4 mt-md-1"
         style={{ height: '700px', overflowY: 'scroll' }}
       >
         <div className="subscription">

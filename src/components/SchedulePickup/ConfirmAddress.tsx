@@ -1,14 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ConfirmAddressImg, dashboardBackground } from '../../assets';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
+
+interface AddressData {
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+}
+
+
 const ConfirmAddress: React.FC = () => {
+
+
+    const [isChecked, setIsChecked] = useState(false);
+    const [formData, setFormData] = useState<AddressData>({
+        street: '',
+        city: '',
+        state: '',
+        zip: '',
+    });
+    const [addresses, setAddresses] = useState<AddressData[]>([]);
+    const [selectedAddressIndex, setSelectedAddressIndex] = useState<number | null>(null);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setAddresses((prevAddresses) => [...prevAddresses, formData]);
+        setFormData({
+            street: '',
+            city: '',
+            state: '',
+            zip: '',
+        });
+    };
+
+    const handleSelectAddress = (index: number) => {
+        setSelectedAddressIndex(index);
+    };
+
 
     const handleGoBackClick = () => {
         window.history.back();
     };
-
-
 
     return (
         <>
@@ -66,11 +108,70 @@ const ConfirmAddress: React.FC = () => {
                         </div>
                     </div>
                     <div className="col-lg-9 col-md-12">
-                        <div className="bg-white panel-shadow px-5 py-4" style={{
+                        <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{
                             height: '700px',
                             overflowY: 'scroll',
                         }}>
-                            asd
+                            <div>
+
+                                {addresses.length > 0 && (
+                                    <div>
+                                        <h2>Addresses:</h2>
+                                        <ul>
+                                            {addresses.map((address, index) => (
+                                                <li key={index}>
+                                                    <label>
+                                                        <input
+                                                            type="radio"
+                                                            name="address"
+                                                            value={index}
+                                                            checked={selectedAddressIndex === index}
+                                                            onChange={() => handleSelectAddress(index)}
+                                                        />
+                                                        {address.street}, {address.city}, {address.state} {address.zip}
+                                                    </label>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+                                {selectedAddressIndex !== null && (
+                                    <button onClick={() => console.log(`Selected address: ${addresses[selectedAddressIndex]}`)}>
+                                        Next
+                                    </button>
+                                )}
+                                <div>
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            checked={isChecked}
+                                            onChange={(e) => setIsChecked(e.target.checked)}
+                                        />
+                                        Add new address
+                                    </label>
+                                    {isChecked && (
+                                        <form onSubmit={handleSubmit}>
+                                            <label>
+                                                Street:
+                                                <input name="street" value={formData.street} onChange={handleChange} />
+                                            </label>
+                                            <label>
+                                                City:
+                                                <input name="city" value={formData.city} onChange={handleChange} />
+                                            </label>
+                                            <label>
+                                                State:
+                                                <input name="state" value={formData.state} onChange={handleChange} />
+                                            </label>
+                                            <label>
+                                                Zip:
+                                                <input name="zip" value={formData.zip} onChange={handleChange} />
+                                            </label>
+                                            <button type="submit">Submit</button>
+                                        </form>
+                                    )}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
