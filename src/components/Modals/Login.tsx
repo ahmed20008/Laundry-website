@@ -15,7 +15,7 @@ interface ModalStates {
     SignupmodalShow: boolean;
 }
 
-export const Login: FC<LoginProps> = ({ onHide, show }) => {
+export const Login: React.FC<LoginProps> = ({ onHide, show }) => {
 
 
     const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);

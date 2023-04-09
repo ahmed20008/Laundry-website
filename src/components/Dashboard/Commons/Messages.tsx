@@ -2,7 +2,14 @@ import React from 'react'
 
 const Messages: React.FC = () => {
   return (
-    <div>Messages</div>
+    <>
+      <div className="bg-white panel-shadow px-5 py-4" style={{
+        height: '730px',
+        overflowY: 'scroll',
+      }}>
+        Messages Page
+      </div>
+    </>
   )
 }
 

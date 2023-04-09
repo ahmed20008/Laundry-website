@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Placeholder } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
+import { Signup } from '../../Modals/Signup';
+
+interface ModalStates {
+    SignupmodalShow: boolean;
+}
 
 const ChangePassword: React.FC = () => {
+
+    const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
+
     return (
         <>
+            <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
             <section style={{ height: '700px' }}>
                 <div className="container py-5">
                     <div className="row">
@@ -36,7 +45,18 @@ const ChangePassword: React.FC = () => {
                                 </div>
                             </Form>
                             <div className="text-end w-75 sm-w-100">
-                                <p className='pt-3'>Don’t have an account? <button className='border-0 bg-transparent' style={{ color: '#35A7FF', textDecoration: 'underline' }}>Sign up</button></p>
+                                <p className='pt-3'>Don’t have an account?
+                                    <button
+                                        className='border-0 bg-transparent'
+                                        style={{ color: '#35A7FF', textDecoration: 'underline' }}
+                                        onClick={() => {
+                                            setSignupModalShow(true);
+                                        }}
+                                    >
+                                        Sign up
+                                    </button>
+                                </p>
+
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,7 @@ interface SignupProps {
   show: boolean;
 }
 
-export const Signup: FC<SignupProps> = ({ onHide, show }) => {
+export const Signup: React.FC<SignupProps> = ({ onHide, show }) => {
 
   //Phone no input
   const [value, setValue] = useState<string>();
