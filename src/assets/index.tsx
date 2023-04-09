@@ -73,6 +73,7 @@ import SchedulePickupImg from './Schedule-pickup.png';
 import ConfirmAddressImg from './Confirm-Address.png';
 import checkInClothes from './checkin-clothes.png';
 import checkInReview from './check-in-review.png';
+import addAddressImg from './add-address-btn.png';
 
 export {
     logo,
@@ -150,4 +151,5 @@ export {
     ConfirmAddressImg,
     checkInClothes,
     checkInReview,
+    addAddressImg,
 }

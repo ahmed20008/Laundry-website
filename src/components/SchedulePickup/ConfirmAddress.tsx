@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { ConfirmAddressImg, dashboardBackground } from '../../assets';
+import { ConfirmAddressImg, addAddressImg, dashboardBackground } from '../../assets';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-
+import './SchedulePickup.css';
+import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
+import { Form } from 'react-bootstrap';
 
 interface AddressData {
     street: string;
@@ -140,17 +142,17 @@ const ConfirmAddress: React.FC = () => {
                                         Next
                                     </button>
                                 )}
-                                <div>
+                                <div className='new-address-form'>
                                     <label>
                                         <input
                                             type="checkbox"
                                             checked={isChecked}
                                             onChange={(e) => setIsChecked(e.target.checked)}
                                         />
-                                        Add new address
+                                        <span className='ps-4'><img src={addAddressImg} /> Add new</span> 
                                     </label>
                                     {isChecked && (
-                                        <form onSubmit={handleSubmit}>
+                                        <Form onSubmit={handleSubmit}>
                                             <label>
                                                 Street:
                                                 <input name="street" value={formData.street} onChange={handleChange} />
@@ -168,7 +170,7 @@ const ConfirmAddress: React.FC = () => {
                                                 <input name="zip" value={formData.zip} onChange={handleChange} />
                                             </label>
                                             <button type="submit">Submit</button>
-                                        </form>
+                                        </Form>
                                     )}
                                 </div>
                             </div>

@@ -29,7 +29,19 @@
     font-weight: 500;
     color: #464646;
 }
-.pickup-form .form-check-input[type=checkbox] {
-    border-radius: 0.25em;
-    border-color: #35A7FF;
+
+.new-address-form input[type="checkbox"] {
+    transform: scale(1.5); 
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #35A7FF;
+    outline: none;
+    cursor: pointer;
 }
+.new-address-form input[type="checkbox"]:checked {
+    background-color: #35A7FF;
+  }
