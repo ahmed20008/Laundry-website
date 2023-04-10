@@ -75,6 +75,8 @@ import checkInClothes from './checkin-clothes.png';
 import checkInReview from './check-in-review.png';
 import addAddressImg from './add-address-btn.png';
 import homeAddressImg from './home-address-img.png';
+import reviewOrderImg from './review-order-img.png';
+import orderPlacedImg from './order-placed-img.png';
 
 export {
     logo,
@@ -154,4 +156,6 @@ export {
     checkInReview,
     addAddressImg,
     homeAddressImg,
+    reviewOrderImg,
+    orderPlacedImg,
 }

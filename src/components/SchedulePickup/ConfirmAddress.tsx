@@ -155,11 +155,6 @@ const ConfirmAddress: React.FC = () => {
                                                 </ul>
                                             </div>
                                         )}
-                                        {/* {selectedAddressIndex !== null && (
-                                    <button onClick={() => console.log(`Selected address: ${addresses[selectedAddressIndex]}`)}>
-                                        Next
-                                    </button>
-                                )} */}
                                         <div className='new-address-form'>
                                             <label className='checkbox-label'>
                                                 <input
@@ -175,25 +170,25 @@ const ConfirmAddress: React.FC = () => {
                                                         <div className="add-address-form">
                                                             <Form onSubmit={handleSubmit}>
                                                                 <Form.Group className="mb-3">
-                                                                    <Form.Control size='lg' type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Enter Address" required />
+                                                                    <Form.Control size='lg' type="text" name="address" value={formData.address} onChange={handleChange} placeholder="Enter Address" />
                                                                 </Form.Group>
                                                                 <Form.Group className="mb-3">
-                                                                    <Form.Control size='lg' type="text" name="street" value={formData.street} onChange={handleChange} placeholder="Enter Street" required />
+                                                                    <Form.Control size='lg' type="text" name="street" value={formData.street} onChange={handleChange} placeholder="Enter Street" />
                                                                 </Form.Group>
                                                                 <div className='row'>
                                                                     <div className="col-md-6">
                                                                         <Form.Group className="mb-3">
-                                                                            <Form.Control size='lg' type="text" name="city" value={formData.city} onChange={handleChange} placeholder="Enter City" required />
+                                                                            <Form.Control size='lg' type="text" name="city" value={formData.city} onChange={handleChange} placeholder="Enter City" />
                                                                         </Form.Group>
                                                                     </div>
                                                                     <div className="col-md-6">
                                                                         <Form.Group className="mb-3">
-                                                                            <Form.Control size='lg' type="text" name="state" value={formData.state} onChange={handleChange} placeholder="Enter State" required />
+                                                                            <Form.Control size='lg' type="text" name="state" value={formData.state} onChange={handleChange} placeholder="Enter State" />
                                                                         </Form.Group>
                                                                     </div>
                                                                 </div>
                                                                 <Form.Group className="mb-3">
-                                                                    <Form.Control size='lg' type="text" name="zip" value={formData.zip} onChange={handleChange} placeholder="Enter Zip Code" required />
+                                                                    <Form.Control size='lg' type="text" name="zip" value={formData.zip} onChange={handleChange} placeholder="Enter Zip Code" />
                                                                 </Form.Group>
                                                                 <div className="text-end">
                                                                     <Button
