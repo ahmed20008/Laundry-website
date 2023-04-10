@@ -1,47 +1,107 @@
-.schedule-pickup h2{
+.schedule-pickup h2 {
     font-size: 24px;
     font-weight: 600;
     color: #818181;
 }
-.schedule-pickup p{
+
+.schedule-pickup p {
     font-size: 16px;
     font-weight: 500;
     color: #646464;
 }
+
 .pickup-form .form-label {
     margin-bottom: 0;
     font-size: 14px;
     font-weight: 400;
     color: #9F9F9F;
 }
-.pickup-form p{
+
+.pickup-form p {
     font-size: 16px;
     font-weight: 500;
     color: #646464;
 }
-.express-delivery p{
+
+.express-delivery p {
     font-size: 15px;
     font-weight: 500;
     color: #9F9F9F;
 }
+
 .express-delivery label {
     font-size: 15px;
     font-weight: 500;
     color: #464646;
 }
 
+
+.address-heading h2 {
+    color: #818181;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.address-heading p {
+    color: #9F9F9F;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .new-address-form input[type="checkbox"] {
-    transform: scale(1.5); 
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    position: relative;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    border: 1.5px solid #35A7FF;
+    margin-right: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     outline: none;
+    border-radius: 3px;
+    border: 2px solid #35A7FF;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
+    vertical-align: middle;
+
 }
-.new-address-form input[type="checkbox"]:checked {
+
+.new-address-form input[type="checkbox"]:checked::before {
+    content: "\2713";
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
     background-color: #35A7FF;
-  }
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.new-address-form input[type="checkbox"]:focus-visible {
+    box-shadow: 0 0 0 3px #35A7FF;
+}
+
+.new-address-form label.checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.add-address-form .form-control {
+    background-color: #E6E6E64F;
+    border: none;
+}
+
+.add-address-form .form-control::placeholder {
+    color: #737373;
+    font-size: 16px;
+}
+.new-address-form input[type="radio"] {
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;
+}
