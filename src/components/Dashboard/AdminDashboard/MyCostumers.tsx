@@ -100,124 +100,153 @@ const MyCostumers: React.FC = () => {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = currentPage * itemsPerPage;
   const displayedCustomers = customers.slice(startIndex, endIndex);
+  const [flag, setFlag] = useState(false);
+  const [checkClick,setCheckClick] = useState("new");
+
+  const handleAddNewCustomer = () => {
+    setFlag(true);
+    setCheckClick("new")
+  }
+
+  const handleCustomerDetail = () => {
+    setFlag(true);
+    setCheckClick("order");
+
+  }
 
 
   return (
-    <>
-      <div className="row">
-        <div className="col-lg-9 col-md-12 px-1">
-          <div className="bg-white mb-3 panel-shadow">
-            <div className="admin-dash-btn py-1">
-              {customerButton.map((customerButton, index) => (
-                <div key={index} className="my-auto mx-auto">
-                  <div className="m-3 d-flex">
-                    <div className="my-auto">
-                      <img src={customerButton.image} className="img-fluid" />
-                    </div>
-                    <div className="text-start ps-3">
-                      <h4 className="mb-0">{customerButton.title}</h4>
-                      <h2 className="mb-0">{customerButton.value}</h2>
-                      <div className='duration-dropdown'>
-                        <Form.Select>
-                          <option>This Month</option>
-                          <option>This week</option>
-                          <option>Today</option>
-                        </Form.Select>
+  <>
+    { flag ? (
+      <>
+      {
+        checkClick == "new" ? (
+          <div><h1>ADD NEW CUSTOMER</h1></div>
+        ) : (
+          <div><h1>Order detail</h1></div>
+        )
+
+      }
+      </>
+
+    ) : (
+      <>
+        <div className="row">
+          <div className="col-lg-9 col-md-12 px-1">
+            <div className="bg-white mb-3 panel-shadow">
+              <div className="admin-dash-btn py-1">
+                {customerButton.map((customerButton, index) => (
+                  <div key={index} className="my-auto mx-auto">
+                    <div className="m-3 d-flex">
+                      <div className="my-auto">
+                        <img src={customerButton.image} className="img-fluid" />
+                      </div>
+                      <div className="text-start ps-3">
+                        <h4 className="mb-0">{customerButton.title}</h4>
+                        <h2 className="mb-0">{customerButton.value}</h2>
+                        <div className='duration-dropdown'>
+                          <Form.Select>
+                            <option>This Month</option>
+                            <option>This week</option>
+                            <option>Today</option>
+                          </Form.Select>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="col-lg-3 col-md-12 px-1">
-          <div className="create-order panel-shadow">
-            <button className='border-0 bg-transparent w-100'>
-              <div className="card d-flex justify-content-center align-items-center" style={{ height: '127px', border: '10px' }}>
-                <div>
-                  <div className='text-center'>
-                    <AddBoxIcon fontSize="large" />
+          <div className="col-lg-3 col-md-12 px-1">
+            <div className="create-order panel-shadow">
+              <button className='border-0 bg-transparent w-100' onClick={handleAddNewCustomer}>
+                <div className="card d-flex justify-content-center align-items-center" style={{ height: '127px', border: '10px' }}>
+                  <div>
+                    <div className='text-center'>
+                      <AddBoxIcon fontSize="large" />
+                    </div>
+                    <p>Add new customer</p>
                   </div>
-                  <p>Add new customer</p>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className="col-md-12 px-1">
-          <div className="bg-white panel-shadow px-5 py-4 mt-md-1"
-            style={{
-              height: '620px',
-              overflowY: 'scroll',
-            }}>
-            <div className="justify-content-between-sm">
-              <div className="order-heading">
-                <h2>All Customers</h2>
-              </div>
+        <div className="row">
+          <div className="col-md-12 px-1">
+            <div className="bg-white panel-shadow px-5 py-4 mt-md-1"
+              style={{
+                height: '620px',
+                overflowY: 'scroll',
+              }}>
               <div className="justify-content-between-sm">
-                <SmallSearchBar />
-                <div>
-                  <SortBy />
+                <div className="order-heading">
+                  <h2>All Customers</h2>
+                </div>
+                <div className="justify-content-between-sm">
+                  <SmallSearchBar />
+                  <div>
+                    <SortBy />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div>
-              <div className="costumers-data pt-4">
-                <Table>
-                  <thead>
-                    <tr>
-                      <th scope="col">Customer Name</th>
-                      <th scope="col">Phone Number</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Address</th>
-                      <th scope="col">Status</th>
-                      <th scope="col"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {displayedCustomers.map((customer, index) => (
-                      <tr key={index}>
-                        <td>{customer.name}</td>
-                        <td>{customer.phone}</td>
-                        <td>{customer.email}</td>
-                        <td>{customer.address}</td>
-                        <td className={customer.status}>
-                          <button>
-                            {customer.status === 'active' ? 'Active' : 'Inactive'}
-                          </button>
-                        </td>
-                        <td>
-                          <button className='border-0 bg-transparent'>
-                            <img src={infoCircle} alt="" />
-                          </button>
-                        </td>
+              <div>
+                <div className="costumers-data pt-4">
+                  <Table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Customer Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
                       </tr>
-                    ))}
-                  </tbody>
-                </Table>
-                <div className='justify-content-between-sm'>
-                  <p className='pt-4' style={{ color: '#B5B7C0', fontSize: '14px' }}>Showing data 1 to {itemsPerPage}</p>
-                  <Pagination
-                    count={Math.ceil(customers.length / itemsPerPage)}
-                    page={currentPage}
-                    onChange={(event, value) => setCurrentPage(value)}
-                    shape="rounded"
-                    className='pt-4'
-                  />
+                    </thead>
+                    <tbody>
+                      {displayedCustomers.map((customer, index) => (
+                        <tr key={index}>
+                          <td>{customer.name}</td>
+                          <td>{customer.phone}</td>
+                          <td>{customer.email}</td>
+                          <td>{customer.address}</td>
+                          <td className={customer.status}>
+                            <button>
+                              {customer.status === 'active' ? 'Active' : 'Inactive'}
+                            </button>
+                          </td>
+                          <td>
+                            <button className='border-0 bg-transparent' onClick={handleCustomerDetail}>
+                              <img src={infoCircle} alt="" />
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                  <div className='justify-content-between-sm'>
+                    <p className='pt-4' style={{ color: '#B5B7C0', fontSize: '14px' }}>Showing data 1 to {itemsPerPage}</p>
+                    <Pagination
+                      count={Math.ceil(customers.length / itemsPerPage)}
+                      page={currentPage}
+                      onChange={(event, value) => setCurrentPage(value)}
+                      shape="rounded"
+                      className='pt-4'
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    )}
+  </>
+  );  
 };
 
 export default MyCostumers
