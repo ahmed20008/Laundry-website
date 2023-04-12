@@ -22,14 +22,27 @@ const customer: CustomerDetails[] = [
     },
 ];
 
+interface CustomerDetailsProps {
+    name: string;
+    phone: string;
+    email: string;
+    address: string
+    status: string;
+}
+interface Props {
+    order: CustomerDetailsProps
+}
 
-const CusomerDetail: React.FC = () => {
+const CusomerDetail: React.FC<Props> = ({ order }: Props) => {
+
+    const { name, email, phone, address, status } = order;
 
     const [createCustomerClicked, setCreateCustomerClicked] = useState(false);
 
     const handleCreateCustomer = () => {
         setCreateCustomerClicked(true);
     };
+    const [Status, setStatus] = useState(status);
 
     return (
         <>
@@ -104,28 +117,35 @@ const CusomerDetail: React.FC = () => {
                                 <div className="customer-details">
                                     <div className='order-details'>
                                         <div>
-                                            <p>Contact Name: <span>Frederick Jones</span></p>
+                                            <p>Contact Name: <span>{name}</span></p>
                                         </div>
                                         <div>
-                                            <p>Email Address: <span>frederickjones@gmail.com</span></p>
+                                            <p>Email Address: <span>{email}</span></p>
                                         </div>
                                         <div>
-                                            <p>Phone Number: <span>+234 810 567 8901</span></p>
+                                            <p>Phone Number: <span>{phone}</span></p>
                                         </div>
                                         <div>
-                                            <p>Address: <span>1234 Lagos Street, Victoria Island</span></p>
+                                            <p>Address: <span>{address}</span></p>
                                         </div>
                                         <div className="active pt-3 ps-3">
                                             <label className='d-flex'>
                                                 <span
                                                     className='pe-3'
                                                     style={{ fontSize: '16px', color: '#292D32', fontWeight: '500' }}>
-                                                    Active
+                                                    {status}
                                                 </span>
                                                 <Form.Check
                                                     type="switch"
                                                     id="custom-switch"
-                                                    defaultChecked={true}
+                                                    checked={status === 'active'}
+                                                    onChange={() => {
+                                                        if (status === 'active') {
+                                                            setStatus('unactive');
+                                                        } else {
+                                                            setStatus('active');
+                                                        }
+                                                    }}
                                                 />
                                             </label>
                                         </div>

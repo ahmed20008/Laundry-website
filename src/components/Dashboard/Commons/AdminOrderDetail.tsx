@@ -12,7 +12,6 @@ interface Props {
 }
 const AdminOrderDetail: React.FC<Props> = ({order}: Props) => {
   const {id, pickupDate, deliveryDate, name, image} = order;
-  console.log("id, pickupDate, deliveryDate, name, image", id, pickupDate, deliveryDate, name, image)
   return (
     <>
       <div className="bg-white panel-shadow px-5 py-4 mt-md-1" style={{

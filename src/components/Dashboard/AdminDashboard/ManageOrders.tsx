@@ -68,17 +68,19 @@ const initialOrders: OrderDetail[] = [
 
 const ManageOrders: React.FC = () => {
   const [ordersDetail, setOrdersDetail] = useState(initialOrders);
+  const [dataIndex, setDataIndex ] = useState<Number>(0);
 
   const [adminOrderDetailClicked, setAdminOrderDetailClicked] = useState(false);
 
-  const handleAdminOrderDetail = () => {
+  const handleAdminOrderDetail = (index: Number) => {
     setAdminOrderDetailClicked(true);
+    setDataIndex(index);
   };
 
   return (
     <>
       {adminOrderDetailClicked ? (
-        <AdminOrderDetail />
+        <AdminOrderDetail order={initialOrders[Number(dataIndex)]}/>
       ) : (
         <>
           <div className="row">
@@ -142,7 +144,7 @@ const ManageOrders: React.FC = () => {
                 </div>
 
                 <div>
-                  {ordersDetail.map((orderDetail) => (
+                  {ordersDetail.map((orderDetail, index) => (
                     <div key={orderDetail.id} className='recent-orders py-2'>
                       <div className="card px-3 py-3">
                         <div className="order-top">
@@ -162,7 +164,7 @@ const ManageOrders: React.FC = () => {
                             <Button variant='contained'
                               style={{ backgroundColor: '#35A7FF', borderRadius: '10px' }}
                               onClick={() => {
-                                handleAdminOrderDetail();
+                                handleAdminOrderDetail(index);
                               }}
                             >
                               Order Details

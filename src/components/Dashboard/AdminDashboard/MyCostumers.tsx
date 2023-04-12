@@ -92,6 +92,7 @@ const initialCustomers: Customer[] = [
 const MyCostumers: React.FC = () => {
 
   const [customerButton, setCustomerButton] = useState(customersButtons);
+  const [dataIndex, setDataIndex ] = useState<Number>(0);
 
   const [customers, setCustomers] = useState<Customer[]>(initialCustomers);
 
@@ -110,9 +111,10 @@ const MyCostumers: React.FC = () => {
     setCheckClick("new")
   }
 
-  const handleCustomerDetail = () => {
+  const handleCustomerDetail = (index: Number) => {
     setFlag(true);
     setCheckClick("detail");
+    setDataIndex(index);
 
   }
 
@@ -125,7 +127,7 @@ const MyCostumers: React.FC = () => {
             checkClick == "new" ? (
               <AddNewCustomer />
             ) : (
-              <CustomerDetail />
+              <CustomerDetail order={initialCustomers[Number(dataIndex)]}/>
             )
           }
         </>
@@ -219,7 +221,9 @@ const MyCostumers: React.FC = () => {
                               </button>
                             </td>
                             <td>
-                              <button className='border-0 bg-transparent' onClick={handleCustomerDetail}>
+                              <button className='border-0 bg-transparent' onClick={() => {
+                                handleCustomerDetail(index);
+                              }}>
                                 <img src={infoCircle} alt="" />
                               </button>
                             </td>
