@@ -119,7 +119,7 @@ const Financials: React.FC = () => {
           <>
             <div className="row">
               <div className="col-lg-9 col-md-12 px-1">
-                <div className="bg-white mb-3 panel-shadow">
+                <div className="bg-white mb-2 panel-shadow">
                   <div className="admin-dash-btn px-4 py-1">
                     {finance.map((finance, index) => (
                       <div className='my-auto mx-auto' key={index}>

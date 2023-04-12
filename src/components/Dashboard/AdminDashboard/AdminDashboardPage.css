@@ -16,6 +16,7 @@
 .admin-dash-btn {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    height: 130px;
 }
 .admin-dash-btn .duration-dropdown .form-select{
     border: 0;

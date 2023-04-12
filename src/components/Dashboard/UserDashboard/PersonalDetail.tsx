@@ -89,7 +89,7 @@ const PersonalDetail: React.FC<Props> = (props) => {
                           <div className='text-end pt-4'>
                             <Button
                               variant="contained"
-                              className='px-5 py-3'
+                              className='px-5 py-2'
                               onClick={handleUpdateProfileClick}
                               style={{ backgroundColor: '#35A7FF', fontWeight: '600' }}>
                               Update Profile

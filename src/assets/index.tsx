@@ -77,6 +77,10 @@ import addAddressImg from './add-address-btn.png';
 import homeAddressImg from './home-address-img.png';
 import reviewOrderImg from './review-order-img.png';
 import orderPlacedImg from './order-placed-img.png';
+import MessageText from './message-text.png';
+import sms from './sms.png';
+import customerDetailsOrders from './customer-details-orders.png';
+import customerDetailsInvoice from './customer-details-invoice.png';
 
 export {
     logo,
@@ -158,4 +162,8 @@ export {
     homeAddressImg,
     reviewOrderImg,
     orderPlacedImg,
+    MessageText,
+    sms,
+    customerDetailsOrders,
+    customerDetailsInvoice,
 }

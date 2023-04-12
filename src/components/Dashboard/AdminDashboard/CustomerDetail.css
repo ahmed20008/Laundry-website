@@ -1,0 +1,19 @@
+.customer-dash-btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 130px;
+}
+.customer-dash-btn h4 {
+    font-size: 14px;
+    color: #ACACAC;
+}
+
+.customer-dash-btn h2 {
+    font-size: 28px;
+    color: #333333;
+}
+
+.customer-dash-btn p {
+    color: #292D32;
+    font-size: 12px;
+}
