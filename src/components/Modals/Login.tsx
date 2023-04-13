@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import { facebookBtn, googleBtn } from '../../assets';
 import { Signup } from './Signup';
+import { ForgetPassword } from './ForgetPassword';
 
 import './Modals.css';
 
@@ -13,15 +14,18 @@ interface LoginProps {
 }
 interface ModalStates {
     SignupmodalShow: boolean;
+    ForgetPassword: boolean;
 }
 
 export const Login: React.FC<LoginProps> = ({ onHide, show }) => {
 
-
     const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
+    const [ForgetPasswordShow, setForgetPasswordShow] = useState<boolean>(false);
 
     return (
         <div>
+            <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
+            <ForgetPassword show={ForgetPasswordShow} onHide={() => setForgetPasswordShow(false)} />
             <Modal
                 // size="md"
                 aria-labelledby="login"
@@ -43,7 +47,14 @@ export const Login: React.FC<LoginProps> = ({ onHide, show }) => {
                                     <Form.Check type="checkbox" label="Remember me"
                                         style={{ fontSize: '14px', color: '#292929', fontWeight: '500', }} />
                                 </Form.Group>
-                                <a href="#" className='my-3 forget-pass'>Forgot password?</a>
+                                <button
+                                    className='my-3 forget-pass border-0 bg-transparent'
+                                    onClick={() => {
+                                        setForgetPasswordShow(true);
+                                    }}
+                                >
+                                    Forgot password?
+                                </button>
                             </div>
 
                             <div className='inline-content-btn'>
@@ -80,7 +91,6 @@ export const Login: React.FC<LoginProps> = ({ onHide, show }) => {
                                     textDecoration: 'underline',
                                 }}> Sign up</Button></p>
                     </div>
-                    <Signup show={SignupmodalShow} onHide={() => setSignupModalShow(false)} />
                 </Modal.Body>
             </Modal>
         </div>

@@ -1,8 +1,5 @@
 import React, { FC, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
-import { facebookBtn, googleBtn } from '../../assets';
-import { Signup } from './Signup';
 
 import './Modals.css';
 import { Button, colors } from '@mui/material';
@@ -21,8 +18,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({ onHide, show }) =>
     return (
         <div>
             <Modal
-                // size="md"
-                aria-labelledby="login"
+                aria-labelledby="reset"
                 centered
                 show={show}
                 onHide={onHide}
