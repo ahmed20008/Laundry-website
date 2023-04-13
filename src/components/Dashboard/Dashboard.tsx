@@ -13,6 +13,12 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = (props: DashboardProps) => {
+
+    const handleClick = () => {
+      window.location.reload();
+    };
+
+
   return (
     <>
       <section style={{
@@ -46,7 +52,9 @@ const Dashboard: React.FC<DashboardProps> = (props: DashboardProps) => {
                 lineHeight: '52px',
                 color: '#FFFFFF',
               }}>
-                <button className='border-0 bg-transparent pe-3'>
+                <button className='border-0 bg-transparent pe-3'
+                onClick={()=> {handleClick();}}
+                >
                   <KeyboardBackspaceIcon style={{ color: '#fff', fontSize: '40px' }} />
                 </button>
                 {props.name}

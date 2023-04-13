@@ -5,7 +5,7 @@ import { Button } from '@mui/material'
 const CustomerCreated: React.FC = () => {
 
     const handleGoBackClick = () => {
-        window.history.back();
+        window.location.reload();
     };
     
     return (

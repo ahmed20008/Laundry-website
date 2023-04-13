@@ -55,7 +55,7 @@ const ConfirmAddress: React.FC = () => {
 
 
     const handleGoBackClick = () => {
-        window.history.back();
+        window.location.reload();
     };
 
     const [confirmAddressClicked, setConfirmAddressClicked] = useState(false);

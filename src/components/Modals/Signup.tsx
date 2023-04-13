@@ -54,7 +54,7 @@ export const Signup: React.FC<SignupProps> = ({ onHide, show }) => {
                   <Form.Check type="checkbox" label="Remember me"
                     style={{ fontSize: '14px', color: '#292929', fontWeight: '500', }} />
                 </Form.Group>
-                <a href="#" className='my-3 forget-pass'>Forgot password?</a>
+                {/* <a href="#" className='my-3 forget-pass'>Forgot password?</a> */}
               </div>
               <Form.Control type="text" placeholder="Referrel Code (Optional)" className='mb-3 signup-form'/>
               <div className='inline-content-btn'>

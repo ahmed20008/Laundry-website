@@ -3,14 +3,18 @@ import { Placeholder } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from '@mui/material/Button';
 import { Signup } from '../../Modals/Signup';
+import { ResetPassword } from '../../Modals/ResetPassword';
 
 interface ModalStates {
+    ResetPasswordShow: boolean;
     SignupmodalShow: boolean;
 }
 
 const ChangePassword: React.FC = () => {
 
     const [SignupmodalShow, setSignupModalShow] = useState<boolean>(false);
+
+    const [ResetPasswordShow, setResetPasswordShow] = useState<boolean>(false);
 
     return (
         <>
@@ -39,9 +43,12 @@ const ChangePassword: React.FC = () => {
                                         backgroundColor: '#35A7FF',
                                         fontSize: '15px',
                                         fontWeight: '500',
-                                    }}>
+                                    }}
+                                    onClick={() => setResetPasswordShow(true)}
+                                    >
                                         Reset Password
                                     </Button>
+                                    <ResetPassword show={ResetPasswordShow} onHide={() => setResetPasswordShow(false)} />
                                 </div>
                             </Form>
                             <div className="text-end w-75 sm-w-100">

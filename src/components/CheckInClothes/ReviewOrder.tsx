@@ -61,7 +61,7 @@ const ReviewOrder: React.FC = () => {
   };
 
   const handleGoBackClick = () => {
-    window.history.back();
+    window.location.reload();
   };
 
   const [sendInvoiceClicked, setSendInvoiceClicked] = useState(false);

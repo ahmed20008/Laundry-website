@@ -8,7 +8,7 @@ const OrderSummary: React.FC = () => {
 
 
   const handleGoBackClick = () => {
-    window.history.back();
+    window.location.reload();
   };
 
   const [submitOrderClicked, setSubmitOrderClicked] = useState(false);

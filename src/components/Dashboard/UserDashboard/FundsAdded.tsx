@@ -6,7 +6,7 @@ import { successLogo } from '../../../assets';
 const ProfileUpdated: React.FC = () => {
 
     const handleGoBackClick = () => {
-        window.history.back();
+        window.location.reload();
     };
 
 
