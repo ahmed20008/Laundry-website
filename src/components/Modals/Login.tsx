@@ -49,7 +49,7 @@ export const Login: React.FC<LoginProps> = ({ onHide, show }) => {
                                         style={{ fontSize: '14px', color: '#292929', fontWeight: '500', }} />
                                 </Form.Group>
                                 <ButtonBase
-                                    style={{color: '#35A7FF', textDecoration: 'underline'}}
+                                    style={{ color: '#35A7FF', textDecoration: 'underline' }}
                                     className='my-3 forget-pass border-0 bg-transparent'
                                     onClick={() => {
                                         setForgetPasswordShow(true);

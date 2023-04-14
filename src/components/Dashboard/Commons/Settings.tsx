@@ -7,6 +7,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import { useNavigate } from 'react-router-dom';
 import './Settings.css';
 import Logout from './Logout';
+import ConfirmAddress from '../../SchedulePickup/ConfirmAddress';
 
 interface SettingProps {
     isAdmin: Boolean;
@@ -14,7 +15,7 @@ interface SettingProps {
 
 
 const Settings: React.FC<SettingProps> = ({ isAdmin }) => {
-    
+
     const navigate = useNavigate();
     function handleButtonClick(): void {
         navigate('/change-password');
@@ -24,7 +25,9 @@ const Settings: React.FC<SettingProps> = ({ isAdmin }) => {
     const onLogoutPress = () => {
         setOpen(true)
     }
-
+    const handleGoBackClick = () => {
+        window.location.reload();
+    };
     return (
         <>
             <div>
@@ -34,7 +37,9 @@ const Settings: React.FC<SettingProps> = ({ isAdmin }) => {
                         <div className='setting-heading py-2'>
                             Settings
                         </div>
-                        <button className='border-0 bg-transparent'>
+                        <button className='border-0 bg-transparent'
+                            onClick={() => { handleGoBackClick(); }}
+                        >
                             <ClearIcon />
                         </button>
                     </div>
