@@ -14,7 +14,7 @@ interface DashboardProps {
 
 const Dashboard: React.FC<DashboardProps> = (props: DashboardProps) => {
 
-    const handleClick = () => {
+    const handleBackClick = () => {
       window.location.reload();
     };
 
@@ -53,7 +53,7 @@ const Dashboard: React.FC<DashboardProps> = (props: DashboardProps) => {
                 color: '#FFFFFF',
               }}>
                 <button className='border-0 bg-transparent pe-3'
-                onClick={()=> {handleClick();}}
+                onClick={()=> {handleBackClick();}}
                 >
                   <KeyboardBackspaceIcon style={{ color: '#fff', fontSize: '40px' }} />
                 </button>

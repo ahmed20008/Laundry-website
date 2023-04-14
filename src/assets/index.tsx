@@ -81,6 +81,8 @@ import MessageText from './message-text.png';
 import sms from './sms.png';
 import customerDetailsOrders from './customer-details-orders.png';
 import customerDetailsInvoice from './customer-details-invoice.png';
+import chatEmoji from './chat-emoji.png';
+import chatSend from './chat-send.png';
 
 export {
     logo,
@@ -166,4 +168,6 @@ export {
     sms,
     customerDetailsOrders,
     customerDetailsInvoice,
+    chatEmoji,
+    chatSend,
 }

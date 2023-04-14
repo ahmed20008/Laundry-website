@@ -7,6 +7,7 @@ import { Signup } from './Signup';
 import { ForgetPassword } from './ForgetPassword';
 
 import './Modals.css';
+import { ButtonBase } from '@mui/material';
 
 interface LoginProps {
     onHide: () => void;
@@ -47,14 +48,15 @@ export const Login: React.FC<LoginProps> = ({ onHide, show }) => {
                                     <Form.Check type="checkbox" label="Remember me"
                                         style={{ fontSize: '14px', color: '#292929', fontWeight: '500', }} />
                                 </Form.Group>
-                                <button
+                                <ButtonBase
+                                    style={{color: '#35A7FF', textDecoration: 'underline'}}
                                     className='my-3 forget-pass border-0 bg-transparent'
                                     onClick={() => {
                                         setForgetPasswordShow(true);
                                     }}
                                 >
                                     Forgot password?
-                                </button>
+                                </ButtonBase>
                             </div>
 
                             <div className='inline-content-btn'>
