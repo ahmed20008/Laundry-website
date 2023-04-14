@@ -1,0 +1,16 @@
+To switch between Admin and User panel: 
+
+In Dashboard Folder -> Panel.tsx -> Change isAdmin to True or False
+
+
+
+To switch between Admin and User In Header: 
+
+In main.tsx File -> Change isAdmin to True or False
+
+
+
+To Switch between Incomming and OutGoing Messages:
+
+In Dashboard Folder -> Common Folder -> Messages.tsx -> Change isSender to True or False 
+
