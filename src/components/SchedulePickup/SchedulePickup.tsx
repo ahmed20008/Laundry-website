@@ -117,17 +117,18 @@ const SchedulePickup: React.FC = () => {
                             <Form.Label>Select Pickup date</Form.Label>
                             <Form.Control type="date" />
                           </Form.Group>
-                          <div className='pb-3'>
+                          <div className='pb-3 select-service'>
                             <Form.Label>Select Service</Form.Label>
                             {checkRadioProps.map((option, index) => (
                               <Form.Check
                                 key={index}
-                                type="checkbox"
+                                type="radio"
                                 label={option.label}
                                 name="checkRadios"
                                 value={option.value}
                                 checked={selectedValues.includes(option.value)}
                                 onChange={handleCheckboxChange}
+                                style={{borderColor: 'red'}}
                               />
                             ))}
                           </div>
@@ -138,8 +139,8 @@ const SchedulePickup: React.FC = () => {
                           <p>Delivery is 5days after pickup is scheduled.</p>
                           <div className="express-delivery d-flex mt-3">
                             <p className='pe-4'>Don’t want to wait?</p>
-                            <Form.Group>
-                              <Form.Check aria-label="option 1" label="Express delivery (Next day)" />
+                            <Form.Group className='select-service'>
+                              <Form.Check label="Express delivery (Next day)" />
                             </Form.Group>
                           </div>
                           <div className='text-end mt-4'>

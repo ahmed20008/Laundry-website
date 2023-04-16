@@ -7,6 +7,7 @@ import { logo, SignupLogo, LoginLogo } from '../assets';
 import { Login } from './Modals/Login';
 import { Signup } from './Modals/Signup';
 import { Link, useNavigate } from 'react-router-dom';
+import { Fade, Menu, MenuItem } from '@mui/material';
 import './Header.css';
 
 interface HeaderProps {
@@ -48,6 +49,16 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
   function handleCheckInClothes(): void {
     navigate('/check-in');
   }
+
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <div className={isSticky ? 'sticky-nav' : ''}>
       <div className='rectengle-2 w-full'>
@@ -78,12 +89,33 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                     </div>
                   </>
                 ) : (
-                  <div className="contact pe-4 my-auto">
-                    <img src={LoginLogo} width="20px" />
-                    <button>
-                      Admin
-                    </button>
-                  </div>
+                  <>
+                    <div className="contact pe-4 my-auto">
+                      <Button
+                        id="fade-button"
+                        aria-controls={open ? 'fade-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                        style={{ color: '#fff', textTransform: 'capitalize', }}
+                      >
+                        <img src={LoginLogo} width="20px" />
+                        Admin
+                      </Button>
+                      <Menu
+                        id="fade-menu"
+                        MenuListProps={{
+                          'aria-labelledby': 'fade-button',
+                        }}
+                        anchorEl={anchorEl}
+                        open={open}
+                        onClose={handleClose}
+                        TransitionComponent={Fade}
+                      >
+                        <MenuItem onClick={handleClose}>Log Out</MenuItem>
+                      </Menu>
+                    </div>
+                  </>
                 )}
               </div>
             </div>
@@ -141,7 +173,7 @@ const Header: React.FC<HeaderProps> = ({ isAdmin }) => {
                     }}
                     className="px-5 py-2 nav-btn"
                     onClick={handleCheckInClothes}
-                    >
+                  >
                     Check in Clothes
                   </Button>
                 </div>

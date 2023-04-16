@@ -7,6 +7,7 @@ import SortBy from '../Commons/SortBy';
 import SmallSearchBar from '../Commons/SmallSearchBar';
 import AdminOrderDetail from '../Commons/AdminOrderDetail';
 import { Form } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface Order {
   name: string;
@@ -19,7 +20,7 @@ const orders: Order[] = [
     name: 'New Orders',
     image: newOrders,
     count: 12,
-  },  
+  },
   {
     name: 'Completed Orders',
     image: completedOrders,
@@ -67,7 +68,7 @@ const initialOrders: OrderDetail[] = [
 const AdminDashboardPage: React.FC = () => {
 
   const [ordersDetail, setOrdersDetail] = useState(initialOrders);
-  const [dataIndex, setDataIndex ] = useState<Number>(0);
+  const [dataIndex, setDataIndex] = useState<Number>(0);
 
   const [adminOrderDetailClicked, setAdminOrderDetailClicked] = useState(false);
 
@@ -75,6 +76,11 @@ const AdminDashboardPage: React.FC = () => {
     setAdminOrderDetailClicked(true);
     setDataIndex(index);
   };
+
+  const navigate = useNavigate();
+  function handleCheckInClothes(): void {
+    navigate('/check-in');
+  }
 
   return (
     <>
@@ -111,7 +117,9 @@ const AdminDashboardPage: React.FC = () => {
             </div>
             <div className="col-lg-3 col-md-12 px-1">
               <div className="create-order panel-shadow">
-                <button className='border-0 bg-transparent w-100'>
+                <button className='border-0 bg-transparent w-100'
+                  onClick={() => { handleCheckInClothes(); }}
+                >
                   <div className="card d-flex justify-content-center align-items-center" style={{ height: '127px', border: '10px' }}>
                     <div>
                       <div className='text-center'>

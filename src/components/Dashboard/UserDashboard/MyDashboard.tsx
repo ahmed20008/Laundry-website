@@ -5,6 +5,7 @@ import './MyDashboard.css';
 
 interface Button {
   name: string;
+  notify?: string;
   logo: string;
 }
 
@@ -16,7 +17,6 @@ interface MyDashboardProps {
 
 
 const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuStartIndex }: MyDashboardProps) => {
-  console.log("butn",buttons)
   return (
     <>
       <div className="row">
@@ -27,8 +27,18 @@ const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuS
                 buttons.map((btn, index) => {
                   return (
                     <div className='m-3'>
-                      <button className='border-0 bg-transparent p-0' onClick={() => onButtonClick( Number(index) + Number(menuStartIndex)) }>
+                      <button className='border-0 bg-transparent p-0' onClick={() => onButtonClick(Number(index) + Number(menuStartIndex))}>
                         <div className="card border-0 bg-transparent">
+                          <div style={{ position: 'absolute', right: '0px', top: '-17px' }}>
+                            <div className="notification-no" style={{
+                              backgroundColor: '#FF5964',
+                              color: '#fff',
+                              width: '23px',
+                              borderRadius: '50px'
+                            }}>
+                              {btn.notify}
+                            </div>
+                          </div>
                           <img src={btn.logo} className='img-fluid' />
                           <p>{btn.name}</p>
                         </div>
@@ -39,7 +49,10 @@ const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuS
               }
             </div>
           </div>
-          <div className="bg-white panel-shadow mt-md-1">
+          <div className="bg-white panel-shadow mt-md-1" style={{
+            height: '525px',
+            overflowY: 'scroll',
+          }}>
             <div className="packages px-4 pt-4">
               <h2 className='pb-3'>Subscriptions and Packages</h2>
               <div className="row">
@@ -145,7 +158,7 @@ const MyDashboard: React.FC<MyDashboardProps> = ({ onButtonClick, buttons, menuS
             <div className='text-end pe-4 pb-4'>
               <p style={{
                 color: '#818181',
-                fontSize: '12px',
+                fontSize: '11px',
               }}>
                 Upgrade to PRO and get unlimited
                 <br />

@@ -138,7 +138,7 @@ const ConfirmAddress: React.FC = () => {
                                                 <ul className='p-0'>
                                                     {addresses.map((address, index) => (
                                                         <li key={index} style={{ listStyle: 'none', paddingBottom: '1.5rem' }}>
-                                                            <label>
+                                                            <label className='d-flex align-items-center'>
                                                                 <input
                                                                     type="radio"
                                                                     name="address"
@@ -147,8 +147,14 @@ const ConfirmAddress: React.FC = () => {
                                                                     onChange={() => handleSelectAddress(index)}
                                                                     onClick={() => { handleConfirmAddress(); }}
                                                                 />
-                                                                <span className='ps-4 pe-4'><img src={homeAddressImg} /> Home {index+1}</span>
-                                                                {address.address}, {address.city}, {address.state} {address.zip}
+                                                                <div className='ps-4 pe-5'>
+                                                                    <span className='d-inline'>
+                                                                        <img src={homeAddressImg} /> Home {index + 1}
+                                                                    </span>
+                                                                </div>
+                                                                <div>
+                                                                    {address.address}, {address.street}, <br /> {address.city}, {address.state} {address.zip}
+                                                                </div>
                                                             </label>
                                                         </li>
                                                     ))}

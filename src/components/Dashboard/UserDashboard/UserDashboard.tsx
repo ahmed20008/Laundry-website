@@ -3,14 +3,13 @@ import MyDashboard from './MyDashboard';
 import Subscription from './Subscription';
 import PersonalDetail from './PersonalDetail';
 import Messages from '../Commons/Messages';
-import { dashboardBtn, logoutBtn, messagesBtn, personalDetailBtn, subscriptionBtn } from '../../../assets';
+import { dashboardBtn, messagesBtn, personalDetailBtn, subscriptionBtn } from '../../../assets';
 import SideBar from '../Commons/SideBar';
-import Logout from '../Commons/Logout';
 import MyOrder from './MyOrder';
 import Invoice from './Invoice';
 import MyWallet from './MyWallet';
 import { HelpCenter } from '@mui/icons-material';
-import { helpCenter, invoice, myOrderBtn, myWallet, refer } from '../../../assets';
+import { helpCenter, invoice, myOrderBtn, myWallet } from '../../../assets';
 
 interface UserDashboardProps {
   isAdmin: Boolean,
@@ -27,7 +26,7 @@ const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) 
   const renderComponent = () => {
     switch (currentComponent) {
       case 0:
-        return <MyDashboard onButtonClick={onButtonClick} buttons={topMenuButtons} menuStartIndex={TopMenuStartIndex}/>;
+        return <MyDashboard onButtonClick={onButtonClick} buttons={topMenuButtons} menuStartIndex={TopMenuStartIndex} />;
       case 1:
         return <PersonalDetail />;
       case 2:
@@ -43,7 +42,7 @@ const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) 
       case 8:
         return <HelpCenter />
       default:
-        return <MyDashboard onButtonClick={onButtonClick} buttons={topMenuButtons} menuStartIndex={TopMenuStartIndex}/>;
+        return <MyDashboard onButtonClick={onButtonClick} buttons={topMenuButtons} menuStartIndex={TopMenuStartIndex} />;
     }
   }
 
@@ -73,6 +72,7 @@ const UserDashboard: React.FC<UserDashboardProps> = (props: UserDashboardProps) 
     },
     {
       name: "Invoice",
+      notify: "1",
       logo: invoice
     },
     {
